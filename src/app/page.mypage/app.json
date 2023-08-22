@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.mypage",
+    "title": "\ub9c8\uc774\ud398\uc774\uc9c0",
+    "namespace": "mypage",
+    "viewuri": "/mypage",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.mypage",
+        "name": "PageMypageComponent",
+        "path": "./page.mypage/page.mypage.component"
+    },
+    "ng": {
+        "selector": "wiz-page-mypage",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-mypage()"
+}

@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.yzimkzit",
+    "title": "\uadf8\ub798\ud504 - \uc18c\ubcc0\uc758 \uc0c9 \uce21\uc815",
+    "namespace": "graph.yzimkzit",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-yzimkzit()",
+    "ng.build": {
+        "id": "portal.dataset.graph.yzimkzit",
+        "name": "PortalDatasetGraphYzimkzitComponent",
+        "path": "./portal.dataset.graph.yzimkzit/portal.dataset.graph.yzimkzit.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-yzimkzit",
+        "inputs": [],
+        "outputs": []
+    }
+}

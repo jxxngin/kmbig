@@ -1,0 +1,6 @@
+{
+    "package": "macro",
+    "version": "1.0.0",
+    "use_app": true,
+    "use_route": true
+}

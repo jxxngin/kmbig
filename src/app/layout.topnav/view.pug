@@ -1,0 +1,14 @@
+.wiz-page
+    .wiz-navbar
+        .container-mainmenu
+            wiz-component-navigation
+        .cotainer-submenu(*ngIf="!(router.url == '/main' || router.url.includes('/dataset/search') || router.url == '/login' || router.url.includes('/survey') || router.url.includes('/ocr'))")
+            wiz-component-navigation-sub()
+    
+    .wiz-content
+        .wiz-view
+            router-outlet
+
+wiz-portal-season-alert
+// .block-page(*ngIf="service.auth.status === null || service.loading.isshow")
+//     wiz-portal-season-loading-hexa

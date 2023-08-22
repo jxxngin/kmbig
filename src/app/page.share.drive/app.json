@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.share.drive",
+    "title": "\ub370\uc774\ud130\uc14b \uacf5\uc720 - \ub4dc\ub77c\uc774\ube0c",
+    "namespace": "share.drive",
+    "viewuri": "/share/drive",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.share.drive",
+        "name": "PageShareDriveComponent",
+        "path": "./page.share.drive/page.share.drive.component"
+    },
+    "ng": {
+        "selector": "wiz-page-share-drive",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-share-drive()"
+}

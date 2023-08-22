@@ -1,0 +1,21 @@
+{
+    "mode": "portal",
+    "id": "graph.dpljpprr",
+    "title": "\uadf8\ub798\ud504 - \uc124\uc9c4",
+    "namespace": "graph.dpljpprr",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-dpljpprr()",
+    "ng.build": {
+        "id": "portal.dataset.graph.dpljpprr",
+        "name": "PortalDatasetGraphDpljpprrComponent",
+        "path": "./portal.dataset.graph.dpljpprr/portal.dataset.graph.dpljpprr.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-dpljpprr",
+        "inputs": [],
+        "outputs": []
+    },
+    "type": "app"
+}

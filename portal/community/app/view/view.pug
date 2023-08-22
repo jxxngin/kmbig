@@ -1,0 +1,34 @@
+.pt-4.pb-4.m-auto(style="max-width: 960px;")
+    .page-header
+        .row.align-items-center.mb-3
+            .col-auto
+                .page-pretitle 커뮤니티
+                h2.page-title {{category == 'notice' ? '공지사항' : '문의게시판'}}
+
+            .col-auto.ml-auto.d-print-none
+                .d-flex
+                    a.btn.btn-border.ml-2.d-none.d-sm-inline-block(routerLink="/community/{{category}}/list")
+                        i.mr-2.fas.fa-list
+                        | 목록
+                    a.btn.btn-border.ml-2.d-none.d-sm-inline-block(*ngIf="view.parent_id == false", routerLink="/community/{{category}}/edit/new")
+                        i.mr-2.fas.fa-edit
+                        | 하위글쓰기
+                    a.btn.btn-border.ml-2.d-none.d-sm-inline-block(*ngIf="user.id == login.id || login.role == 'admin'", routerLink="/community/{{category}}/edit/{{post_id}}")
+                        i.mr-2.fas.fa-edit
+                        | 편집
+
+    .info-form.row.first-child
+        .col-md-1.text-left
+            .btn.btn-sm(*ngIf="view.priority==1") 필독
+            .btn.btn-sm.btn-border(*ngIf="view.priority==0") 일반
+        .col-md-8
+            h3.m-0(style="font-size: 20px; line-height: 24px;") {{view.title}}
+        .col-md-3.text-right
+            .btn.btn-sm 작성자
+            span.ml-3 {{user.name}}
+                .text-muted.mt-2 {{view.created}}
+
+    .info-form.row.editor-area.pt-4.pb-4(style="white-space: pre") {{view.content}}
+
+    .info-form.row.first-child.p-3
+        wiz-portal-community-comment()

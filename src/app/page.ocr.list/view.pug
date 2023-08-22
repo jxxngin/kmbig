@@ -1,0 +1,31 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header
+        .row.align-items-center
+            .col-auto
+                h2.page-title 설문 목록
+
+            .col-auto.ml-auto.d-print-none(*ngIf="userRole == 'admin'")
+                .d-flex
+                    button.btn.btn-border.pr-4.pl-4((click)="edit('new')") 설문 추가
+
+    .row.mt-3
+        .col-md-12
+            .overflow-x
+                table.table.board-table.table-hover.table-vcenter.box-shadow.br-10
+                    thead
+                        tr
+                            th.text-center.btlr 설문명
+                            th.text-center.width-2 생성일
+                            th.text-center.width-2([ngClass]="userRole == 'admin' ? '' : 'btrr'") 업데이트일
+                            th.text-center.width-2.btrr(*ngIf="userRole == 'admin'")
+
+                    tbody
+                        tr(*ngIf="list?.length == 0")
+                            td.text-center.p-6(colspan=6) 목록이 없습니다.
+
+                        tr.cursor-pointer(*ngFor="let item of list;")
+                            td.text-center(routerLink=`/ocr/analysis/{{item.id}}`) {{item.name}}
+                            td.text-center(routerLink=`/ocr/analysis/{{item.id}}`) {{item.created.substring(0,10)}}
+                            td.text-center(routerLink=`/ocr/analysis/{{item.id}}`) {{item.updated.substring(0,10)}}
+                            td.text-center(*ngIf="userRole == 'admin'")
+                                button.btn((click)="edit(item.id)") 설문 수정

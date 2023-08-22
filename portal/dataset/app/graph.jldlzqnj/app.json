@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.jldlzqnj",
+    "title": "\uadf8\ub798\ud504 - \ubcf5\ubd80\uc555\ud1b5 \uce21\uc815",
+    "namespace": "graph.jldlzqnj",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-jldlzqnj()",
+    "ng.build": {
+        "id": "portal.dataset.graph.jldlzqnj",
+        "name": "PortalDatasetGraphJldlzqnjComponent",
+        "path": "./portal.dataset.graph.jldlzqnj/portal.dataset.graph.jldlzqnj.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-jldlzqnj",
+        "inputs": [],
+        "outputs": []
+    }
+}

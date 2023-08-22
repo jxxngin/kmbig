@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.ocr.edit",
+    "title": "OCR - edit",
+    "namespace": "ocr.edit",
+    "viewuri": "/ocr/edit/:id",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.ocr.edit",
+        "name": "PageOcrEditComponent",
+        "path": "./page.ocr.edit/page.ocr.edit.component"
+    },
+    "ng": {
+        "selector": "wiz-page-ocr-edit",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-ocr-edit()"
+}

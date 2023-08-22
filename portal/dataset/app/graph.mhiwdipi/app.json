@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "mhiwdipi",
+    "title": "\uadf8\ub798\ud504 - \ubab8t",
+    "namespace": "mhiwdipi",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-mhiwdipi()",
+    "ng.build": {
+        "id": "portal.dataset.graph.mhiwdipi",
+        "name": "PortalDatasetGraphMhiwdipiComponent",
+        "path": "./portal.dataset.graph.mhiwdipi/portal.dataset.graph.mhiwdipi.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-mhiwdipi",
+        "inputs": [],
+        "outputs": []
+    }
+}

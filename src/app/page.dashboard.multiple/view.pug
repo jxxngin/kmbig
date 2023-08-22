@@ -1,0 +1,20 @@
+.container-full
+    .container-sub
+        .container-image
+            .row
+                .col-auto
+                    .content
+                        .content-menu
+                            a(routerLink="/main")
+                                i.fa-solid.fa-house(style="color:black;width:20px;height:20px")
+                            i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                            a.cursor-pointer.ml-2.text-menu(routerLink="/test/device")
+                                span 데이터셋 대시보드
+                            i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                            span.ml-2.text-menu {{category_ls.title}} 데이터
+
+                        .content-menu-name
+                            span.text-menu-name {{category_ls.title}} 데이터셋
+
+                        .content-content
+                            span.text-content {{category_ls.content}}

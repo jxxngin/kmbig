@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.intersection",
+    "title": "\ucc28\ud2b8 - \uad50\uc9d1\ud569",
+    "namespace": "chart.intersection",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.intersection",
+        "name": "ComponentChartIntersectionComponent",
+        "path": "./component.chart.intersection/component.chart.intersection.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-intersection",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-intersection([title]=\"\")"
+}

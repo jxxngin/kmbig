@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.search",
+    "title": "\uac80\uc0c9\ubc14 - \uba54\uc778",
+    "namespace": "search",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.search",
+        "name": "ComponentSearchComponent",
+        "path": "./component.search/component.search.component"
+    },
+    "ng": {
+        "selector": "wiz-component-search",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-search()"
+}

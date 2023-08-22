@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.survey.edit",
+    "title": "\uc124\ubb38 \ubd84\uc11d - \ucd94\uac00/\uc218\uc815",
+    "namespace": "survey.edit",
+    "viewuri": "/survey/edit/:id",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.survey.edit",
+        "name": "PageSurveyEditComponent",
+        "path": "./page.survey.edit/page.survey.edit.component"
+    },
+    "ng": {
+        "selector": "wiz-page-survey-edit",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-survey-edit()"
+}

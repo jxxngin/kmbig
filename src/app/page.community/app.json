@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.community",
+    "title": "\ucee4\ubba4\ub2c8\ud2f0",
+    "namespace": "community",
+    "viewuri": "/community/:category?/:mode?/:id?",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.community",
+        "name": "PageCommunityComponent",
+        "path": "./page.community/page.community.component"
+    },
+    "ng": {
+        "selector": "wiz-page-community",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-community()"
+}

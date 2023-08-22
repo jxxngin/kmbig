@@ -1,0 +1,7 @@
+.row
+    span 담홍 / 설태 / 청자 / 치흔 별 분석 결과
+.row.d-flex.justify-content-center
+    .row.mt-3.d-flex.justify-content-center
+        .col-2(*ngFor="let item of tongue")
+            button([ngClass]="mode==item.id ? 'btn-show' : 'btn-none'", (click)="loadGraph(item.id)") {{item.name}}
+    canvas#widget-tongue(width="400", style="margin-top: 20px;")

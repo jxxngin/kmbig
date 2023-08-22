@@ -1,0 +1,94 @@
+.container.pt-5(style="max-width:1780px")
+    .page-header
+        .row.align-items-center.mb-3
+            .col-auto
+                .form-selectgroup
+                    label.form-selectgroup-item(*ngFor="let uni of hospital;let i = index")
+                        input.form-selectgroup-input(type='checkbox', checked, (click)="select('hospital', uni.id)")
+                        span.form-selectgroup-label {{uni.name}} ({{uni.count}})
+            .col-auto.ml-auto.d-print-none
+                .search.d-flex.input-group.search-bar
+                    input.form-control.d-flex(
+                        type="text", 
+                        placeholder="검색",
+                        (keydown)="onKeyDown($event)", 
+                        [(ngModel)]="word", 
+                        (ngModelChange)="doSearch()", 
+                        style="width: 230px;")
+                    button.btn.btn-search((click)="search()", style="border-radius:50%")
+                        i.fas.fa-search
+                    .autocomplete-wrap.pt-4(
+                        *ngIf="filtered.length > 0", 
+                        (mouseleave)="currentSearch(null)")
+                            .box.my-4
+                                .autocomplete-item.m-2(
+                                    *ngFor="let item of filtered; let i = index", 
+                                    (mousedown)="onClick(i)",
+                                    [ngClass]="{'current-dataset': currentIndex === i}", 
+                                    (mouseover)="currentSearch(i)",
+                                ) {{item}}
+            
+            .col-auto
+                a.btn.ml-2(routerLink="/survey")
+                    i.fas.fa-list.mr-2
+                    | 목록
+                a.btn.ml-2(*ngIf="userRole=='admin'", routerLink="/survey/edit/{{surveyID}}")
+                    i.fas.fa-edit.mr-2
+                    | 편집
+                button.btn.ml-2((click)="downloadExcel()") 
+                    i.fas.fa-file-excel.mr-2
+                    | Excel 저장
+
+        .row.align-items-center.mb-3
+            .col-auto
+                .form-selectgroup
+                    label.form-selectgroup-item(*ngFor="let uni of years;let i = index")
+                        input.form-selectgroup-input(type='checkbox', checked, (click)="select('years', uni.id)")
+                        span.form-selectgroup-label {{uni.name}} ({{uni.count}})
+
+    .row
+        .col-md-4
+            .container-viewer
+                h2 설문지
+                ng-container(*ngIf="PDF")
+                    iframe([src]="PDF" style="min-height: 700px;")
+                ng-container(*ngIf="!PDF")
+                    .card
+                        .card-body.p-4(style="height: 400px")
+                            h2.blank 설문지 파일이 없습니다.
+
+        .col-md-8
+            .container-graph
+                .row.align-items-center.mb-3
+                    .col-auto
+                        h2.page-title(*ngIf="tryExcept==200")
+                            span 설문 분석 결과 : {{current.groupID}}
+                    .col-auto.ml-auto
+                        span ({{page+1}}/{{total+1}})
+                ng-container(*ngIf="tryExcept==204")
+                    .card.br-10.mb-5(style="height: 400px")
+                        .card-body.p-4
+                            h2.blank 데이터가 없습니다.
+                ng-container(*ngIf="![200,204].includes(tryExcept)")
+                    .card.br-10.mb-5.mt-4(style="height: 400px")
+                        .card-body.p-4
+                            h2.blank 지원하지 않는 파일입니다.
+
+                .card.br-10.mb-5(*ngIf="tryExcept==200")
+                    .card-body.p-4(style="min-height:400px")
+                        .row
+                            .col-md-6.mb-5(*ngFor="let item of current.content;let i = index")
+                                h2 {{item}}
+                                canvas.mt-4(height="350", width="500", id="widget-survey-process-{{page}}-{{i}}")
+                    
+                    ng-container(*ngIf="tryExcept==200")
+                        .card-footer.d-flex
+                            button.btn(*ngIf="page!=0", (click)="prev()") 이전
+                            .ml-auto
+                            button.btn(*ngIf="page!=total", (click)="next()") 다음
+                            // button.btn((click)="downloadImage()") Image 저장
+                            // button.btn.ml-2((click)="downloadExcel()") Excel 저장
+
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

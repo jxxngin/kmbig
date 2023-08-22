@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.mhqcflmd",
+    "title": "\uadf8\ub798\ud504 - \ud0c0\uc561\ubd84\ube44\ub7c9 \uce21\uc815",
+    "namespace": "graph.mhqcflmd",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-mhqcflmd()",
+    "ng.build": {
+        "id": "portal.dataset.graph.mhqcflmd",
+        "name": "PortalDatasetGraphMhqcflmdComponent",
+        "path": "./portal.dataset.graph.mhqcflmd/portal.dataset.graph.mhqcflmd.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-mhqcflmd",
+        "inputs": [],
+        "outputs": []
+    }
+}

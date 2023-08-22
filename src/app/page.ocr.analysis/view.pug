@@ -1,0 +1,72 @@
+.container(style="margin-top:30px")
+    .title
+        .row
+            .col
+                h2.mb-0 OCR
+            .col-auto([ngClass]="showResult" ? '' : 'p-0')
+                button.btn.btn-square.btn-block(routerLink="/ocr/list")
+                    i.fas.fa-list
+                    span.ml-2 목록
+            .col-auto.pl-0(*ngIf="showResult")
+                button.btn.btn-square.btn-block((click)="download()")
+                    i.fas.fa-file-excel
+                    span.ml-2 Excel 저장
+    .row
+        .col-md-1
+            h4.mb-0 설문 유형
+        .col
+            input.form-control([(ngModel)]="ocr.info.name", disabled)
+        .col-md-2(*ngIf="!showResult")
+            button.btn.btn-square.btn-block((click)="upload()") 파일 업로드
+    
+    .row(*ngIf="showFiles && !showResult")
+        .col-md-1
+            h4.mb-0 파일 목록
+        .col.d-flex.flex-column
+            .file(*ngFor="let item of files; let i = index")
+                span.ml-2 {{item.name}}
+                button.btn.btn-close.ml-2((click)="deleteFile(item, i)")
+        .col-md-2
+            button.btn.btn-square.btn-block((click)="start()") 설문 진행
+
+    .row(*ngIf="!showResult")
+        .blank
+            span 파일을 업로드 해주세요.
+    
+    .row(*ngIf="saveall")
+        .blank
+            span OCR 결과를 엑셀로 생성중 입니다.
+
+    .row(*ngIf="showResult", [ngClass]="{'d-none': saveall}")
+        .option
+            .col.d-flex.align-items-center
+                strong.col-md-2 파일 이름
+                span.col(style="padding-left: 10px;") {{files[fileIndex].name}}
+                span.col-md-2.text-center 남은 파일 : {{files.length - fileIndex - 1}}
+            .col.d-flex.flex-row
+                button.btn.btn-square.btn-block((click)="prev()", [disabled]="page.current <= 1", style="margin-left: 10px;") 이전
+                button.btn.btn-square.btn-block((click)="next()", [disabled]="page.current >= page.last", style="margin-right: 10px;") 다음
+        .result
+            .col-md-6.show-img
+                canvas#ocr
+            .col-md-6(style="padding: 10px;")
+                .list
+                    strong [ {{page.current}} / {{page.last}} ]
+                    .item(*ngFor="let item of list")
+                        .question
+                            strong {{item.question_id}}
+                            strong(*ngIf="item.question_sub.length !== 0") -{{item.question_sub}}
+                            strong . {{item.question_name}}
+                        .check.mt-2(*ngIf="item.result !== null")
+                            .col(*ngFor="let data of [].constructor(item.result); let i = index")
+                                span.mr-2 {{ i + 1 }}
+                                input.mr-5(
+                                    type="checkbox",
+                                    [(ngModel)]="item.answer[i]"
+                                )
+    
+    .row(*ngIf="showResult && page.last == page.current", [ngClass]="{'d-none': saveall}")
+        button.btn.btn-square.btn-block((click)="nextFile()") 다음 파일
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

@@ -1,0 +1,16 @@
+.row.m-0
+    .dataset-card.p-0
+        .row
+            span(style="font-size:18px;font-family:'MAIN-M';margin-top:20px;margin-left:20px") 항목별 보유현황
+            // span.ml-auto 예외 데이터셋
+        .dataset-card-list
+            .card.menu-card.cursor-pointer(*ngFor="let item of dataset_ls;let i = index", (click)="click2(item.id)", ngClass="{{item.css_class}}")
+                span {{item.title}}
+    .bar-chart.p-0
+        .card.box-shadow
+            .card-body.py-0
+                .row
+                    a.ml-auto.cursor-pointer(style="width:140px;margin-top:20px;color:#4F40F1;font-size:16px;text-decoration:none", (click)="click(link)") 데이터 상세보기
+                        i.fa-solid.fa-chevron-right.ml-2
+                .row(style="margin-top:23px")
+                    canvas#widget-bar(height="450", width="630")

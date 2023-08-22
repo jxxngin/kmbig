@@ -1,0 +1,22 @@
+{
+    "mode": "component",
+    "id": "component.chart.bar",
+    "title": "\ub300\uc2dc\ubcf4\ub4dc - \ud56d\ubaa9\ubcc4 \ubcf4\uc720\ud604\ud669",
+    "namespace": "chart.bar",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.bar",
+        "name": "ComponentChartBarComponent",
+        "path": "./component.chart.bar/component.chart.bar.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-bar",
+        "inputs": [
+            "url",
+            "dataset_ls"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-bar([url]=\"\", [dataset_ls]=\"\")"
+}

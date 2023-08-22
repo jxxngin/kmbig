@@ -1,0 +1,64 @@
+.pt-4.pb-4.m-auto(style="max-width: 960px;")
+    .page-header
+        .row.align-items-center.mb-3
+            .col-auto
+                .page-pretitle 커뮤니티
+                h2.page-title {{category == 'notice' ? '공지사항' : '문의게시판'}}
+
+            .col-auto.ml-auto.d-print-none
+                .search.d-flex(style="width: 280px;")
+                    input.form-control.d-flex(
+                        type="text", 
+                        placeholder="검색", 
+                        [(ngModel)]="search_word", 
+                        (keydown.enter)="search(search_word)", 
+                        style="width: 230px;")
+                    button.btn.btn-search((click)="search(search_word)")
+                        i.fas.fa-search
+            .col-auto
+                .write
+                    a.btn.btn-light.ml-2.d-none.d-sm-inline-block.btn-border.w-auto.font-weight-bold(*ngIf="login", routerLink="/community/{{category}}/edit/new") 글쓰기
+                        i.ml-2.fas.fa-plus
+
+    .overflow-x
+        table.table.table-hover.board-table.box-shadow
+            thead
+                tr
+                    th.table-head.text-center.col-1.btlr 번호
+                    th.table-head.text-center.col-5 제목
+                    th.table-head.text-center.col-1
+                    th.table-head.text-center.col-1 작성자
+                    th.table-head.text-center.col-2 수정일
+                    th.table-head.text-center.col-2.btrr 등록일
+
+            tbody
+                tr(*ngIf="!list")
+                    td.p-6.text-center(colspan=6) 게시글이 없습니다.
+                tr(*ngFor="let item of list;")
+                    td.text-center.width-2
+                        .text(*ngIf="!item.parent_id")
+                            span(*ngIf="item.priority == 0") {{item.id}}
+                            span.br-5.pr-2.pl-2(
+                                *ngIf="item.priority == 1",
+                                style="font-size: 14px;") 필독
+                    td
+                        span.ml-1.mr-2(*ngIf="item.parent_id")
+                            svg.icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                path(d='M6 6v6a3 3 0 0 0 3 3h10l-4 -4m0 8l4 -4')
+                        a.text-navy((click)="show(item.id)") {{item.title.length == 0 ? "제목없음" : item.title}}
+                        span.text-muted.ml-2(*ngIf="item.files != NULL")
+                            i.fas.fa-save 
+                    td.text-center.width-1
+                        span.text-muted
+                            i.fas.fa-comments.mr-1
+                            span {{item.comment}}
+
+                    td.text-center.width-1 {{item.user.name}}
+                    td.text-center.width-2 {{item.updated.substr(0,10)}}
+                    td.text-center.width-2 {{item.created.substr(0,10)}}
+    
+    wiz-component-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="move($event)")
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

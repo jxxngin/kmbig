@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.survey.result",
+    "title": "\uc124\ubb38 \ubd84\uc11d - \uacb0\uacfc",
+    "namespace": "survey.result",
+    "viewuri": "/survey/result/:id",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.survey.result",
+        "name": "PageSurveyResultComponent",
+        "path": "./page.survey.result/page.survey.result.component"
+    },
+    "ng": {
+        "selector": "wiz-page-survey-result",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-survey-result()"
+}

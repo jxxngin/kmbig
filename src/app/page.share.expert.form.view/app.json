@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.share.expert.form.view",
+    "title": "\ub370\uc774\ud130\uc14b \uacf5\uc720 - \uacf5\uc720\uc2ec\uc0ac \ud3fc",
+    "namespace": "share.expert.form.view",
+    "viewuri": "/share/expert/form/view/:id",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.share.expert.form.view",
+        "name": "PageShareExpertFormViewComponent",
+        "path": "./page.share.expert.form.view/page.share.expert.form.view.component"
+    },
+    "ng": {
+        "selector": "wiz-page-share-expert-form-view",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-share-expert-form-view()"
+}

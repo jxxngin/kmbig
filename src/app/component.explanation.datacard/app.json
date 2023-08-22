@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.explanation.datacard",
+    "title": "\uc0c1\uc138 \uc124\uba85 - \ub370\uc774\ud130 \uce74\ub4dc",
+    "namespace": "explanation.datacard",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.explanation.datacard",
+        "name": "ComponentExplanationDatacardComponent",
+        "path": "./component.explanation.datacard/component.explanation.datacard.component"
+    },
+    "ng": {
+        "selector": "wiz-component-explanation-datacard",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-explanation-datacard()"
+}

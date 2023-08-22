@@ -1,0 +1,117 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header.pb-4.mb-4(style="border-bottom: 2px solid #000000;")
+        .row.align-items-center
+            .col-auto
+                h2.page-title(style='font-size:30px') 공유 요청 확인
+
+            .col-auto.ml-auto
+                a.btn.btn-border.pr-4.pl-4(routerLink="/share/user/form")
+                    i.mr-2.fas.fa-list
+                    | 목록
+                a.btn.btn-border.pr-4.pl-4.ml-2(routerLink="/dashboard/{{info.category}}/{{info.dataset_id}}")
+                    i.mr-2.fas.fa-file
+                    | 데이터셋 정보
+    
+    .share-confirm
+        .card.card-body.br-10
+            .row
+                .col-md-4
+                    h3 요청 번호
+                .col-md-4
+                    h3 요청자
+            .row
+                .col-md-4
+                    span {{info.id}}
+                .col-md-4
+                    span {{info.user}}
+
+            .row.pt-4
+                .col-md-4
+                    h3 요청 데이터셋
+                .col-md-4
+                    h3 요청 날짜
+            .info-form.row.pt-0.pb-4
+                .col-md-4
+                    span {{info.dataset_name}}
+                .col-md-4
+                    span {{info.created}}
+
+            .row.pt-4
+                .col-md-4
+                    h3 활용 목적
+                .col-md-8
+                    h3 데이터셋 공유 요청 목적
+            .info-form.row.pt-0.pb-4
+                .col-md-4
+                    span {{info.purpose}}
+                .col-md-8
+                    span {{info.content}}
+
+            .row.pt-4
+                .col-md-12
+                    h3 데이터셋 요청 필터
+            .info-form.row.pt-0.pb-4
+                table.table
+                    thead
+                        tr
+                            th.text-center 수집 연도
+                            th.text-center 성별
+                            th.text-center 연령
+                            th.text-center 체질
+                            th.text-center 키
+                            th.text-center 몸무게
+
+                    tbody
+                        tr
+                            td.text-center
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let year of period;let i = index")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.period[year]", disabled)
+                                        span.form-check-label {{year}}
+                            td.text-center
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let fm of sex;let i = index")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sex[fm]", disabled)
+                                        span.form-check-label {{fm}}
+                            td.text-center
+                                .row
+                                    .col-md-6(*ngFor="let birthday of age;let i = index")
+                                        .filter-area
+                                            label.d-flex.form-check.mb-1
+                                                input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.age[birthday]", disabled)
+                                                span.form-check-label {{birthday}}
+                            td.text-center
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let ss of sasang;let i = index")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sasang[ss]", disabled)
+                                        span.form-check-label {{ss}}
+                            td.text-center
+                                .filter-area
+                                    label.d-flex.mb-1
+                                        input.form-control(type='text', [(ngModel)]="filter.height1", disabled)
+                                        span  ~  
+                                        input.form-control(type='text', [(ngModel)]="filter.height2", disabled)
+                            td.text-center
+                                .filter-area
+                                    label.d-flex.mb-1
+                                        input.form-control(type='text', [(ngModel)]="filter.weight1", disabled)
+                                        span ~ 
+                                        input.form-control(type='text', [(ngModel)]="filter.weight2", disabled)
+
+            .row.pt-4
+                .col-md-4
+                    h3 요청 상태
+                .col-md-4
+                    h3 답변
+            .row.pt-0.pb-4
+                .col-md-4
+                    button.btn(class='{{info.status_class}}') {{info.status_name}}
+                .col-md-8
+                    span(*ngIf="info.status=='request'", style='color:var(--wiz-color-navy);font-weight:bold') 접수되었습니다.
+                    span(*ngIf="info.status=='process'", style='color:var(--wiz-color-orange);font-weight:bold') {{info.dataset_name}} 활용 가능 여부 확인 중입니다.
+                    span(*ngIf="info.status=='allow'", style='color:green;font-weight:bold') {{info.dataset_name}}을 활용할 수 있습니다.
+                    span(*ngIf="info.status=='reject'", style='color:red;font-weight:bold') {{info.dataset_name}}을 활용할 수 없습니다.
+
+    .text-right.mt-4(*ngIf="info.status=='allow'")
+        button.btn.btn-process((click)="drive()") 연구자 서랍 저장
+        button.btn.btn-process.ml-2((click)="download()") 다운로드

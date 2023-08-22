@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dashboard.multiple",
+    "title": "\ub370\uc774\ud130\uc14b - \ub300\uc2dc\ubcf4\ub4dc - \uc751\uc6a9",
+    "namespace": "dashboard.multiple",
+    "viewuri": "/dashboard/multiple",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dashboard.multiple",
+        "name": "PageDashboardMultipleComponent",
+        "path": "./page.dashboard.multiple/page.dashboard.multiple.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dashboard-multiple",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dashboard-multiple()"
+}

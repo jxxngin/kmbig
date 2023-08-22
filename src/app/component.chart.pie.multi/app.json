@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.pie.multi",
+    "title": "\ucc28\ud2b8 - Pie - multi",
+    "namespace": "chart.pie.multi",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.pie.multi",
+        "name": "ComponentChartPieMultiComponent",
+        "path": "./component.chart.pie.multi/component.chart.pie.multi.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-pie-multi",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-pie-multi([title]=\"\")"
+}

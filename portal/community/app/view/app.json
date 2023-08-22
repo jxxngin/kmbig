@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "type": "app",
+    "id": "view",
+    "title": "\ucee4\ubba4\ub2c8\ud2f0 - \uac8c\uc2dc\uae00",
+    "namespace": "view",
+    "viewuri": "",
+    "category": "kmbig",
+    "template": "wiz-portal-community-view()",
+    "ng.build": {
+        "id": "portal.community.view",
+        "name": "PortalCommunityViewComponent",
+        "path": "./portal.community.view/portal.community.view.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-community-view",
+        "inputs": [],
+        "outputs": []
+    }
+}

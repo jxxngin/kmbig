@@ -1,0 +1,22 @@
+{
+    "mode": "component",
+    "id": "component.explanation.preview",
+    "title": "\uc0c1\uc138 \uc124\uba85 - \ub370\uc774\ud130 \ubbf8\ub9ac\ubcf4\uae30",
+    "namespace": "explanation.preview",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.explanation.preview",
+        "name": "ComponentExplanationPreviewComponent",
+        "path": "./component.explanation.preview/component.explanation.preview.component"
+    },
+    "ng": {
+        "selector": "wiz-component-explanation-preview",
+        "inputs": [
+            "list",
+            "mode"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-explanation-preview([list]=\"\", [mode]=\"\")"
+}

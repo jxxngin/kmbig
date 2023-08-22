@@ -1,0 +1,24 @@
+{
+    "mode": "component",
+    "id": "component.chart.pie",
+    "title": "\ucc28\ud2b8 - Pie",
+    "namespace": "chart.pie",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.pie",
+        "name": "ComponentChartPieComponent",
+        "path": "./component.chart.pie/component.chart.pie.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-pie",
+        "inputs": [
+            "title",
+            "labels",
+            "datas",
+            "colors"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-pie([title]=\"\", [labels]=\"\", [datas]=\"\", [colors]=\"\")"
+}

@@ -1,0 +1,85 @@
+.dropdown-menu {
+    // position: absolute;
+    top: 56px;
+    transform: translate(-490px, 0%);
+    width: 500px;
+
+    // Mobile
+    @media(max-width: 575px) {
+        width: 100%;
+        transform: none;
+        left: 0px;
+    }
+
+    .list-group {
+        height: 300px;
+        overflow-y: auto;
+
+        .list-group-item {
+            cursor: pointer;
+        }
+    }
+
+    .background-muted {
+        background-color: #E8E8F0;
+    }
+}
+
+.btn-request {
+    background-color: #E2E4F0;
+    color: var(--wiz-color-navy);
+    border-radius: 10px;
+    border: 1px solid #E2E4F0;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-allow {
+    background-color: #64CF7C;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #64CF7C;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-reject {
+    background-color: #F0142F;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #F0142F;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-process {
+    background-color: #C9C5F0;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid #C9C5F0;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-refresh {
+    border: 0px !important;
+    cursor: pointer;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotateAnimation 0.4s linear;
+}

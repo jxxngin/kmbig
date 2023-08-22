@@ -1,0 +1,28 @@
+.container-data
+    span 데이터 카드
+.container-card.p-0(style="width:1780px;margin:auto;margin-top:30px;margin-bottom:95px")
+    .row
+        // .card(style="width:423px;height:193px;background:white;border:2px solid white; box-shadow:0px 3px 24px #E3E6EC;border-radius:10px")
+        //     img(src="/assets/images/explanation/data-card-1.png")
+        // .card(style="width:423px;height:193px;background:white;border:2px solid white; box-shadow:0px 3px 24px #E3E6EC;border-radius:10px;margin-left:34px")
+        //     img(src="/assets/images/explanation/data-card-2.png")
+        // .card(style="width:423px;height:193px;background:white;border:2px solid white; box-shadow:0px 3px 24px #E3E6EC;border-radius:10px;margin-left:34px")
+        //     img(src="/assets/images/explanation/data-card-3.png")
+        
+        .col-md-3.d-flex(*ngFor="let item of list;let i = index")
+            .card.cursor-pointer((click)="dataset(item.id)")
+                .card-body
+                    div
+                        span.title {{item.title}}
+                    span.sub {{item.category}} 데이터셋
+                    
+        .col-md-3.d-flex
+            .card.cursor-pointer(routerLink="/dataset/search")
+                .card-body
+                    .row
+                        .col-md-6
+                            div
+                                span.title 다른 데이터셋
+                            span.title 찾아보기
+                        .col-md-6.d-flex.test
+                            i.fas.fa-arrow-right.fa-5x

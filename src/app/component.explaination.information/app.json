@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.explaination.information",
+    "title": "\uc0c1\uc138 \uc124\uba85 - \uae30\ubcf8 \uc815\ubcf4",
+    "namespace": "explaination.information",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.explaination.information",
+        "name": "ComponentExplainationInformationComponent",
+        "path": "./component.explaination.information/component.explaination.information.component"
+    },
+    "ng": {
+        "selector": "wiz-component-explaination-information",
+        "inputs": [
+            "list"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-explaination-information([list]=\"\")"
+}

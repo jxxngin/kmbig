@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "type": "app",
+    "id": "list",
+    "title": "\ucee4\ubba4\ub2c8\ud2f0 - \ub9ac\uc2a4\ud2b8",
+    "namespace": "list",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-community-list()",
+    "ng.build": {
+        "id": "portal.community.list",
+        "name": "PortalCommunityListComponent",
+        "path": "./portal.community.list/portal.community.list.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-community-list",
+        "inputs": [],
+        "outputs": []
+    }
+}

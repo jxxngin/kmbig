@@ -1,0 +1,22 @@
+.dropdown-menu.dropdown-menu-arrow.dropdown-menu-end.dropdown-menu-card.show
+    .card
+        .card-header
+            .col
+                h3.card-title Last updates
+            .col-auto
+                button.btn.btn-refresh.p-0([ngClass]="{ 'rotate-animation': isAnimating }", (click)="refresh()")
+                    i.fa-solid.fa-rotate-right
+
+        .list-group
+            .list-group-item.d-flex(
+                *ngFor="let item of list; let i = index;",
+                [ngClass]="item.show ? 'background-muted' : ''",
+                (click)="show(item)"
+            )
+                .col
+                    .row.mb-1
+                        button.col-auto.btn.btn-sm(class='btn-{{item.status}}') {{item.status_name}}
+                        strong.col.d-flex.align-items-center([ngClass]="item.show ? 'text-muted' : ''") {{item.title}}
+                        span.col-auto.text-muted {{item.updated}}
+                    .row
+                        span.col([ngClass]="item.show ? 'text-muted' : ''") {{item.content}}

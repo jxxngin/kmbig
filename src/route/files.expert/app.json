@@ -1,0 +1,8 @@
+{
+    "id": "files.expert",
+    "title": "/files/expert",
+    "route": "/files/expert/<path:path>",
+    "viewuri": "",
+    "category": "",
+    "controller": "base"
+}

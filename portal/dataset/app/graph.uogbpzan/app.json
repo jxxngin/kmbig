@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.uogbpzan",
+    "title": "\uadf8\ub798\ud504 - \uc2e0\uc7a5\ubab8\ubb34\uac8c",
+    "namespace": "graph.uogbpzan",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-uogbpzan()",
+    "ng.build": {
+        "id": "portal.dataset.graph.uogbpzan",
+        "name": "PortalDatasetGraphUogbpzanComponent",
+        "path": "./portal.dataset.graph.uogbpzan/portal.dataset.graph.uogbpzan.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-uogbpzan",
+        "inputs": [],
+        "outputs": []
+    }
+}

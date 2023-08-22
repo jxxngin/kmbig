@@ -1,0 +1,348 @@
+.container-full
+    .container-sub
+        .container-image
+            .content-menu
+                a(routerLink="/main")
+                    i.fa-solid.fa-house(style="color:black;width:20px;height:20px")
+                i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                a.cursor-pointer.ml-2.text-menu(routerLink="/dashboard/device")
+                    span 데이터셋 대시보드
+                i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                a.cursor-pointer.ml-2.text-menu(routerLink="{{dashboard_url}}")
+                    span {{dashboard_name}}
+                i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                span.ml-2.text-menu {{list.title}}
+
+            .content-menu-name
+                span.text-menu-name {{list.title}}
+
+            .content-content
+                span.text-content {{list.summary}}
+
+            .content-button
+                button.btn-data((click)="share()") 
+                    span 데이터셋 다운로드
+
+    .container-sub2
+        .container-explanation
+            .row
+                .data-information
+                    wiz-component-explaination-information([list]="list")
+            .row
+                .data-information
+                    // wiz-component-explanation-inquire([title]="")
+                    // wiz-component-explanation-inquire((filterResult)="shareFilter($event)")
+                    wiz-component-explanation-inquire((filterResult)="shareFilter($event)", (offcanvas)="offBool($event)")
+            .row
+                wiz-component-explanation-preview([list]="list", [mode]="mode")
+            .row
+                .container-graph(style="margin-left:80px")
+                    wiz-component-explaination-yearly()
+                .container-graph(*ngIf="list.title === '체온 측정'", style="margin-left:30px")
+                    wiz-portal-dataset-graph-elqeifhl()
+                .container-graph(*ngIf="list.title === '신장몸무게'", style="margin-left:30px")
+                    wiz-portal-dataset-graph-uogbpzan()
+                .container-graph(*ngIf="list.title === '소변의 색 측정'", style="margin-left:30px")
+                    wiz-portal-dataset-graph-yzimkzit()
+                .container-graph(*ngIf="list.title === '알레르기 검사'", style="margin-left:30px")
+                    wiz-portal-dataset-graph-qouvvjom()
+                .container-graph(*ngIf="list.title === '설진'", style="margin-left:30px")
+                    wiz-portal-dataset-graph-dpljpprr()
+                .container-graph(*ngIf="!['체온 측정', '신장몸무게', '소변의 색 측정', '알레르기 검사', '설진'].includes(list.title)", style="margin-left:30px")
+                    wiz-component-explaination-graph([title]="list.title")
+            .row
+                .container-data
+                    wiz-component-explanation-explanation([list]="list")
+            .row
+                wiz-component-explanation-datacard()
+
+    .offcanvas.offcanvas-end([class.show]="down", tabindex="-1", aria-labelledby="offcanvasRightLabel")
+        .offcanvas-header(*ngIf="down && !use")
+            h5#offcanvasRightLabel.offcanvas-title 다운로드 하기
+            button.btn-close((click)="close()", type="button", data-bs-dismiss="offcanvas", aria-label="Close")
+        
+        .offcanvas-body(*ngIf="down && !use")
+            h3 데이터셋 공유 요청 및 다운로드 기능은 로그인 후, 사용할 수 있습니다.
+            .text-right
+                button.btn.btn-down(routerLink="/login") 로그인
+
+        ul.nav.nav-tabs.nav-fill(role="tablist")
+            .col.d-flex
+                li.nav-item(role="presentation")
+                    button.nav-link#share-tab(
+                        [ngClass]="tab === 'share' ? 'active' : ''",
+                        (click)="change('share')",
+                        data-bs-toggle="tab",
+                        data-bs-target="#share",
+                        type="button",
+                        role="tab",
+                        aria-controls="share",
+                        aria-selected="true"
+                    ) 공유 신청
+                li.nav-item(role="presentation")
+                    button.nav-link#list-tab(
+                        [ngClass]="tab === 'list' ? 'active' : ''",
+                        (click)="change('list')",
+                        data-bs-toggle="tab",
+                        data-bs-target="#list",
+                        type="button",
+                        role="tab",
+                        aria-controls="list",
+                        aria-selected="false"
+                    ) 신청 목록
+            .col-auto.nav-close
+                button.btn-close((click)="close()", type="button", data-bs-dismiss="offcanvas", aria-label="Close")
+        
+        .tab-content
+            .tab-pane.fade.show#share(
+                [ngClass]="tab === 'share' ? 'active' : ''",
+                role="tabpanel",
+                aria-labelledby="share-tab"
+            )
+                .offcanvas-body(*ngIf="down && use")
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label.required 데이터셋 명
+                        .col-md-12
+                            input.form-control(type="text", [(ngModel)]="list.title", disabled)
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-3.col-form-label.required 활용 목적
+                        .col-md-12
+                            select.form-select([(ngModel)]="purpose")
+                                option(value="default", selected, hidden, disabled) 선택해주세요
+                                option(value="앱개발") 앱개발
+                                option(value="사업화") 사업화
+                                option(value="산업화") 산업화
+                                option(value="학술연구") 학술연구
+                                option(value="출판") 출판
+                                option(value="기타") 기타 
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label.required 데이터셋 공유 요청 목적
+                        .col-md-12
+                            textarea.form-control([(ngModel)]="content", placeholder="앱개발 / 사업화 / 산업화 / 학술연구 / 출판 / 기타", rows=3)
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label 데이터셋 요청 필터
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 수집 연도
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let year of period;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.period[year]")
+                                                    span.form-check-label {{year}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 성별
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let fm of sex;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sex[fm]")
+                                                    span.form-check-label {{fm}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 연령
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let birthday of age;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.age[birthday]")
+                                                    span.form-check-label {{birthday}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 체질
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-3(*ngFor="let ss of sasang;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sasang[ss]")
+                                                    span.form-check-label {{ss}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 키
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.mb-1
+                                                    input.form-control(type='text', [(ngModel)]="filter.height1")
+                                                    span  ~  
+                                                    input.form-control(type='text', [(ngModel)]="filter.height2")
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 몸무게
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.mb-1
+                                                    input.form-control(type='text', [(ngModel)]="filter.weight1")
+                                                    span  ~  
+                                                    input.form-control(type='text', [(ngModel)]="filter.weight2")
+
+                    .text-right
+                        button.btn.btn-down((click)="request()") 공유 요청
+
+            .tab-pane.fade.show#list(
+                [ngClass]="tab === 'list' ? 'active' : ''",
+                role="tabpanel",
+                aria-labelledby="list-tab"
+            )
+                .offcanvas-body(*ngIf="down && use && listMode === 'list'")
+                    .blank(*ngIf="shareInfo.length === 0")
+                        span 귀하의 {{list.title}}에 대한 공유 요청이 존재하지 않습니다.
+                    .list-card.mb-2(*ngFor="let item of shareInfo;")
+                        .card.box-shadow((click)="changeMode(item)")
+                            .card-body
+                                .row
+                                    .col-auto.p-0
+                                        button.btn.btn-sm(class='{{item.status_class}}') {{item.status_name}}
+                                    .col.d-flex.align-items-center
+                                        span {{item.purpose}}
+                                    .col-auto.p-0.d-flex.align-items-center
+                                        span.text-muted {{item.updated.substring(0,10)}}
+                                .row.mt-3
+                                    .col.p-0
+                                        span.btn-sm.tag.mr-1.px-2(*ngFor="let filter of item.tag;") {{filter}}
+                                        span.ml-2(*ngIf="item.tag.length >= 5") ...
+
+                .offcanvas-body(*ngIf="down && use && listMode === 'detail'")
+                    .form-group.row.mb-3
+                        .col
+                            label.form-label.col-form-label 데이터셋 공유 요청 상태
+                        .col-auto.ml-auto
+                            button.btn.btn-sm(class='{{history.status_class}}') {{history.status_name}}
+                        // .col-auto
+                        //     button.btn.btn-square((click)="changeMode()")
+                        //         i.fa-solid.fa-arrow-left
+                        //         span.ml-2 목록
+                        .col-md-12
+                            .form-control(type="text") {{statusContent}}
+                    .text-center.mb-3(*ngIf="status=='download'")
+                        .row
+                            .col-md-6
+                                button.btn.btn-down((click)="drive()") 연구자 서랍 저장
+                            .col-md-6
+                                button.btn.btn-down((click)="download()") Download
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label.required 데이터셋 명
+                        .col-md-12
+                            input.form-control(type="text", [(ngModel)]="list.title", disabled)
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-3.col-form-label.required 활용 목적
+                        .col-md-12
+                            input.form-control([(ngModel)]="history.purpose", type="text", disabled)
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label.required 데이터셋 공유 요청 목적
+                        .col-md-12
+                            textarea.form-control([(ngModel)]="history.content", disabled)
+
+                    .form-group.row.mb-3
+                        .col-md-12
+                            label.form-label.col-form-label 데이터셋 요청 필터
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 수집 연도
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let year of period;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="history.filter.period[year]", disabled)
+                                                    span.form-check-label {{year}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 성별
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let fm of sex;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="history.filter.sex[fm]", disabled)
+                                                    span.form-check-label {{fm}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 연령
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-4(*ngFor="let birthday of age;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="history.filter.age[birthday]", disabled)
+                                                    span.form-check-label {{birthday}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 체질
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.form-check.mb-1.col-md-3(*ngFor="let ss of sasang;let i = index")
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="history.filter.sasang[ss]", disabled)
+                                                    span.form-check-label {{ss}}
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 키
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.mb-1
+                                                    input.form-control(type='text', [(ngModel)]="history.filter.height1", disabled)
+                                                    span  ~  
+                                                    input.form-control(type='text', [(ngModel)]="history.filter.height2", disabled)
+                        .col-md-12
+                            table.table
+                                thead
+                                    tr
+                                        th.text-center 몸무게
+                                tbody
+                                    tr
+                                        td.text-center
+                                            .filter-area.row
+                                                label.d-flex.mb-1
+                                                    input.form-control(type='text', [(ngModel)]="history.filter.weight1", disabled)
+                                                    span  ~  
+                                                    input.form-control(type='text', [(ngModel)]="history.filter.weight2", disabled)
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

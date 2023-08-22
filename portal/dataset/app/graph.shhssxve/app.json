@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.shhssxve",
+    "title": "\uadf8\ub798\ud504 - \uc2ec\ubc15\ubcc0\uc774\ub3c4 \uac80\uc0ac",
+    "namespace": "graph.shhssxve",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-shhssxve()",
+    "ng.build": {
+        "id": "portal.dataset.graph.shhssxve",
+        "name": "PortalDatasetGraphShhssxveComponent",
+        "path": "./portal.dataset.graph.shhssxve/portal.dataset.graph.shhssxve.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-shhssxve",
+        "inputs": [],
+        "outputs": []
+    }
+}

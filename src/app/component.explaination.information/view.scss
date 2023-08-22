@@ -1,0 +1,42 @@
+span {
+    font-size: 24px;
+    font-family: 'MAIN-B';
+    color: black;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+img {
+    width: 1720px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.table {
+    width: 1700px;
+    max-height: 320px;
+    font-size: 16px;
+    font-family: 'MAIN-M';
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    tbody {
+        background: none;
+        vertical-align: middle;
+
+        tr {
+            max-height: 40px;
+        }
+
+        th {
+            width: 200px;
+            max-height: 40px;
+            background: #EDEEF8;
+        }
+
+        td {
+            width: 660px;
+        }
+    }
+}

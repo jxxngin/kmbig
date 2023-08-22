@@ -1,0 +1,98 @@
+.search-bar {
+    border: 3px solid #4F40F1;
+    border-radius: 30px;
+    // box-shadow: 0px 3px 24px #E3E6EC;
+    background: #FFFFFF;
+    width: 100%;
+    height: 60px;
+
+    i {
+        width: 18px;
+        height: 18px;
+    }
+
+    .form-control {
+        border-radius: 50px 0 0 50px;
+        border-right: none;
+        padding-left: 25px;
+        z-index: 3;
+        border-color: #4F40F1;
+        box-shadow: none;
+    }
+
+    .btn-search {
+        border-radius: 0 50px 50px 0 !important;
+        border-left: none;
+        border-color: #4F40F1;
+        z-index: 3;
+    }
+
+    .autocomplete-wrap {
+        display: none;
+        position: absolute;
+        top: 0px;
+        border: 3px solid #4F40F1;
+        border-radius: 30px !important;
+        background-color: white;
+        margin-top: 0px;
+        width: 100%;
+        max-height: 30rem;
+        color: black;
+        text-align: left;
+        z-index: 2;
+
+        .box {
+            overflow: auto;
+            max-height: 20rem;
+        }
+
+        .autocomplete-item {
+            line-height: 3rem;
+            font-size: 1rem;
+            text-indent: 10px;
+            cursor: pointer;
+            border-radius: 34px;
+
+            &.current-dataset {
+                font-weight: bold;
+                background-color: #E3E6EC;
+            }
+        }
+    }
+
+    input[type="text"]:focus~.autocomplete-wrap {
+        display: block;
+    }
+}
+
+.recommendation {
+    margin-top: 19px;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    opacity: 1;
+
+    @media(max-width:768px) {
+        display: none;
+        // margin-top: 10px;
+        // margin-left: 10px;
+    }
+}
+
+.btn-tag {
+    margin-bottom: 3px;
+    height: 28px;
+    width: auto;
+    border: 1px solid #B0B0E8;
+    border-radius: 7px;
+    opacity: 1;
+    background: white;
+    color: #B0B0E8;
+    font-size: 14px;
+}
+
+.btn-tag:hover {
+    border: 1px solid #503FF1;
+    color: #503FF1;
+}

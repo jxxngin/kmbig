@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dashboard.device",
+    "title": "\ub370\uc774\ud130\uc14b - \ub300\uc2dc\ubcf4\ub4dc - \uae30\uae30",
+    "namespace": "dashboard.device",
+    "viewuri": "/dashboard/device",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dashboard.device",
+        "name": "PageDashboardDeviceComponent",
+        "path": "./page.dashboard.device/page.dashboard.device.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dashboard-device",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dashboard-device()"
+}

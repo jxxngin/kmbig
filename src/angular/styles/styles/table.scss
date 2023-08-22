@@ -1,0 +1,62 @@
+.board-table {
+    background: white;
+    // border-radius: 34px;
+    thead {
+        th {
+            background-color: #B9B9DD !important;
+            color: black !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+            padding: 12px 0 !important;
+        }
+    }
+    // tr:last-child {
+    //     border-bottom: hidden;
+    // }
+
+    td,
+    th {
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    // .width-1 {
+    //     width: 0.25rem;
+    // }
+
+    // .width-2 {
+    //     width: 0.5rem;
+    // }
+
+    // .width-3 {
+    //     width: 0.75rem;
+    // }
+
+    // .width-4 {
+    //     width: 1rem;
+    // }
+
+    // .width-5 {
+    //     width: 1.25rem;
+    // }
+
+    .width-1 {
+        width: 80px;
+    }
+
+    .width-2 {
+        width: 120px;
+    }
+
+    .width-3 {
+        width: 180px;
+    }
+
+    .width-4 {
+        width: 240px;
+    }
+
+    .width-5 {
+        width: 300px;
+    }
+}

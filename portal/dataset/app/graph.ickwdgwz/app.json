@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.ickwdgwz",
+    "title": "\uadf8\ub798\ud504 - \ub300\uc0ac\ub7c9 \uce21\uc815",
+    "namespace": "graph.ickwdgwz",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-ickwdgwz()",
+    "ng.build": {
+        "id": "portal.dataset.graph.ickwdgwz",
+        "name": "PortalDatasetGraphIckwdgwzComponent",
+        "path": "./portal.dataset.graph.ickwdgwz/portal.dataset.graph.ickwdgwz.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-ickwdgwz",
+        "inputs": [],
+        "outputs": []
+    }
+}

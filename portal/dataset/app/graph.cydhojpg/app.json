@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.cydhojpg",
+    "title": "\uadf8\ub798\ud504 - \ud55c\uc57d\uc7ac1",
+    "namespace": "graph.cydhojpg",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-cydhojpg()",
+    "ng.build": {
+        "id": "portal.dataset.graph.cydhojpg",
+        "name": "PortalDatasetGraphCydhojpgComponent",
+        "path": "./portal.dataset.graph.cydhojpg/portal.dataset.graph.cydhojpg.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-cydhojpg",
+        "inputs": [],
+        "outputs": []
+    }
+}

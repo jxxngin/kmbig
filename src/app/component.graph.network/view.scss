@@ -1,0 +1,60 @@
+.network-graph {
+    // margin-left: 70px;
+    margin-top: 30px;
+    width: 1460px;
+    height: 678px;
+
+    .card {
+        background: #EDEEF8;
+        box-shadow: 0px 3px 24px #E3E6EC;
+        border-radius: 10px;
+        opacity: 1;
+        // width: 1460px;
+        height: 678px;
+
+        .card-header {
+            background: white;
+            height: 49px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            .btn-data {
+                border-radius: 999px;
+                background: #4F40F1;
+                font: normal normal bold 14px/18px SUIT;
+                color: #FFFFFF;
+                width: auto;
+                height: 34px;
+                border: 0px;
+            }
+
+            .btn-none {
+                border-radius: 999px;
+                background: white;
+                font: normal normal medium 14px/18px SUIT;
+                color: #9496A1;
+                width: auto;
+                height: 34px;
+                border: 0px;
+            }
+        }
+
+        .card-body {
+            img {
+                position: relative;
+            }
+
+            .btn-text {
+                position: absolute;
+                background-color: transparent;
+                border: none;
+                font-family: 'MAIN-M';
+                font-size: 16px;
+                color: black;
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}

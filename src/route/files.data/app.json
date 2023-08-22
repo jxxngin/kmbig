@@ -1,0 +1,8 @@
+{
+    "id": "files.data",
+    "title": "/files/data",
+    "route": "/files/data/<path:path>",
+    "viewuri": "",
+    "category": "",
+    "controller": "base"
+}

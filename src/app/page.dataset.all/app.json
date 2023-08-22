@@ -1,0 +1,23 @@
+{
+    "mode": "page",
+    "id": "page.dataset.all",
+    "title": "\ub370\uc774\ud130\uc14b - \ub300\uc2dc\ubcf4\ub4dc",
+    "namespace": "dataset.all",
+    "viewuri": "/dashboard/all/:category",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dataset.all",
+        "name": "PageDatasetAllComponent",
+        "path": "./page.dataset.all/page.dataset.all.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dataset-all",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-page-dataset-all([title]=\"\")"
+}

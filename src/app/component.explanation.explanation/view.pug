@@ -1,0 +1,40 @@
+.row
+    .data-content
+        textarea('#editor'='')
+
+    .data-result
+        .row(style="margin-top:30px;margin-left:15px;")
+            h1
+                span(style="color:red") *
+                | 한의학 연구 결과 건수 연별 표시
+        .row
+            table.table.table-hover.board-table
+                thead(style="height:83px")
+                    tr
+                        th.text-center(style="border-top-left-radius:10px;width:40%") 년도
+                        th.text-center(style="border-top-right-radius:10px") 건수
+                tbody
+                    tr(*ngFor="let file of fileInfo;let i = index")
+                        td.text-center(*ngIf="file.year!='all'") {{file.year}}
+                        td.text-center(*ngIf="file.year!='all'") {{file.rows}}
+
+        .row
+            button.btn-chd 총 {{all}}건
+
+        // .row(style="margin-top:50px;margin-left:25px")
+        //     h1 데이터셋 공유 만족도 평가
+
+        .sop(*ngIf="fileListLoad", style="margin-top:100px;margin-left:15px")
+            .row
+                h1
+                    span(style="color:red") *
+                    | SOP 파일 버전
+                span(style="padding-left:27px") 다운로드 가능합니다.
+            .row
+                table.table.table-hover.board-table.br-none
+                    thead
+                        tr
+                            th.text-center(style="border-top-left-radius:10px;border-top-right-radius:10px") SOP 파일
+                    tbody
+                        tr.cursor-pointer(*ngFor="let one of fileList;let i = index", (click)="download(one)")
+                            td.text-center {{one.name}}

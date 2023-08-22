@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.gvnxalbj",
+    "title": "\uadf8\ub798\ud504 - \ub9e5\uc9c4",
+    "namespace": "graph.gvnxalbj",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-gvnxalbj()",
+    "ng.build": {
+        "id": "portal.dataset.graph.gvnxalbj",
+        "name": "PortalDatasetGraphGvnxalbjComponent",
+        "path": "./portal.dataset.graph.gvnxalbj/portal.dataset.graph.gvnxalbj.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-gvnxalbj",
+        "inputs": [],
+        "outputs": []
+    }
+}

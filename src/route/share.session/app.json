@@ -1,0 +1,7 @@
+{
+    "id": "share.session",
+    "title": "/share",
+    "route": "/share/<path:path>",
+    "viewuri": "",
+    "category": ""
+}

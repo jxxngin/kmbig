@@ -1,0 +1,66 @@
+.container.p-5(*ngIf="data.user && service.auth.show(true)")
+    .card
+        .card-header
+            .col-auto.pr-3
+                span.status-indicator.status-indicator-animated.status-blue
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+            .col
+                h2.page-title 기본정보
+
+        .card-body.p-0
+            .wiz-form
+                .wiz-form-rows.row
+                    .col-md-2.wiz-form-label 이메일
+                    .col-md-10
+                        input.form-control(
+                            type="text",
+                            [(ngModel)]="data.user.email",
+                            disabled)
+            
+                .wiz-form-rows.row
+                    .col-md-2.wiz-form-label 이름
+                    .col-md-10
+                        input.form-control(
+                            type="text",
+                            [(ngModel)]="data.user.name")
+    
+        .card-footer.text-right.area-round.p-4.pt-2.pb-2
+            .btn.btn-save((click)="update()") 저장하기
+    
+    .card.mt-5
+        .card-header
+            .col-auto.pr-3
+                span.status-indicator.status-indicator-animated.status-blue
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+            .col
+                h2.page-title 비밀번호 변경
+
+        .card-body.p-0
+            .wiz-form
+                .wiz-form-rows.row
+                    .col-md-2.wiz-form-label 현재 비밀번호
+                    .col-md-10
+                        input.form-control(
+                            type="password",
+                            [(ngModel)]="data.password.current")
+                
+                .wiz-form-rows.row
+                    .col-md-2.wiz-form-label 변경 비밀번호
+                    .col-md-10
+                        input.form-control(
+                            type="password",
+                            [(ngModel)]="data.password.data")
+                
+                .wiz-form-rows.row
+                    .col-md-2.wiz-form-label 비밀번호 확인
+                    .col-md-10
+                        input.form-control(
+                            type="password",
+                            [(ngModel)]="data.password.repeat")
+                    
+        .card-footer.text-right.area-round.p-4.pt-2.pb-2
+            .btn.btn-edit((click)="changePassword()") 변경하기

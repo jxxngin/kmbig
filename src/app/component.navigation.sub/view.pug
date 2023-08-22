@@ -1,0 +1,31 @@
+nav.navbar.navbar-expand-lg.p-0(style="background:white;margin:auto")
+    .container-fluid.ml-page(*ngIf="menu=='page'")
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.mb-2.mb-lg-0(style="font-size:18px;")
+                li.nav-item(*ngFor="let item of pages_ls;let i = index")
+                    a.nav-link.cursor-pointer.text-default(*ngIf="!currentRoute.includes('edit')", [routerLink]="item.url", routerLinkActive="active") {{item.name}}
+                    a.nav-link.cursor-pointer.text-default(*ngIf="currentRoute.includes('edit')", href="{{item.url}}", [ngClass]="currentRoute == item.url ? 'active':''") {{item.name}}
+    
+    .container-fluid.ml-dashboard(*ngIf="menu=='dashboard'")
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.mb-2.mb-lg-0(style="font-size:18px;")
+                li.nav-item(*ngFor="let item of dashboard_ls;let i = index")
+                    a.nav-link.cursor-pointer.text-default([routerLink]="item.url", routerLinkActive="active") {{item.name}}
+
+    .container-fluid.ml-share(*ngIf="menu=='share'")
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.mb-2.mb-lg-0(style="font-size:18px;")
+                li.nav-item(*ngFor="let item of share_ls;let i = index")
+                    a.nav-link.cursor-pointer.text-default([routerLink]="item.url", routerLinkActive="active") {{item.name}}
+    
+    // .container-fluid.ml-survey(*ngIf="menu=='survey'")
+    //     .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+    //         ul.navbar-nav.mb-2.mb-lg-0(style="font-size:18px;")
+    //             li.nav-item(*ngFor="let item of survey_ls;let i = index")
+    //                 a.nav-link.cursor-pointer.text-default([routerLink]="item.url", routerLinkActive="active") {{item.name}}
+
+    .container-fluid.ml-community(*ngIf="menu=='community'")
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.mb-2.mb-lg-0(style="font-size:18px;")
+                li.nav-item(*ngFor="let item of community_ls;let i = index")
+                    a.nav-link.cursor-pointer.text-default([routerLink]="item.url", routerLinkActive="active") {{item.name}}

@@ -1,0 +1,60 @@
+.card {
+    // width: 655px;
+    // height: 567px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.dataset-card {
+    height: 100%;
+    width: 665px;
+
+    .dataset-card-list {
+        margin-left: 20px;
+        margin-top: 15px;
+        position: relative;
+        flex: 1;
+        overflow-y: auto;
+
+        .menu-card {
+            width: 117px;
+            height: 90px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px #00000029;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 90px;
+            font-size: 16px;
+            font-family: "MAIN-M";
+            overflow: hidden;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .menu-card2 {
+            width: 117px;
+            height: 90px;
+            background: #4F40F1;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px #00000029;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 90px;
+            font-size: 16px;
+            font-family: "MAIN-B";
+            overflow: hidden;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    }
+}
+
+.bar-chart {
+    width: 655px;
+    height: 567px;
+}

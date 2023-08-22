@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.search.popularity",
+    "title": "\uc778\uae30 \uac80\uc0c9\uc5b4",
+    "namespace": "search.popularity",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.search.popularity",
+        "name": "ComponentSearchPopularityComponent",
+        "path": "./component.search.popularity/component.search.popularity.component"
+    },
+    "ng": {
+        "selector": "wiz-component-search-popularity",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-search-popularity([title]=\"\")"
+}

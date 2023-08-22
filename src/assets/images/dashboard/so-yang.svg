@@ -1,0 +1,16 @@
+<svg id="소양인" xmlns="http://www.w3.org/2000/svg" width="73" height="82" viewBox="0 0 73 82">
+  <path id="다각형_23" data-name="다각형 23" d="M32.016,9.091a5,5,0,0,1,8.968,0l28.459,57.7A5,5,0,0,1,64.959,74H8.041a5,5,0,0,1-4.484-7.212Z" transform="translate(73 78) rotate(180)" fill="#d2cffb" opacity="0.351"/>
+  <g id="그룹_552" data-name="그룹 552" transform="translate(20 -0.391)">
+    <g id="그룹_535" data-name="그룹 535" transform="translate(1.877 0)">
+      <circle id="타원_330" data-name="타원 330" cx="7.5" cy="7.5" r="7.5" transform="translate(7.123 0.391)"/>
+      <g id="그룹_532" data-name="그룹 532" transform="translate(0 20.644)">
+        <rect id="사각형_339" data-name="사각형 339" width="11" height="56" transform="translate(9.123 5.747)"/>
+        <path id="사각형_340" data-name="사각형 340" d="M7,0H22a7,7,0,0,1,7,7V33a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" transform="translate(0.123 -0.253)"/>
+      </g>
+    </g>
+    <g id="패스_219" data-name="패스 219" transform="translate(33 61.391) rotate(180)" fill="rgba(242,116,141,0.4)" stroke-linecap="round">
+      <path d="M 31.56822776794434 44 L 1.431771397590637 44 L 16.49999046325684 2.904831886291504 L 31.56822776794434 44 Z" stroke="none"/>
+      <path d="M 16.49999046325684 5.809646606445312 L 2.863536834716797 43 L 30.1364631652832 43 L 16.49999046325684 5.809646606445312 M 16.49999046325684 0 L 33 45 L 0 45 L 16.49999046325684 0 Z" stroke="none" fill="#f2748d"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header
+        .row.align-items-center
+            .col-auto
+                h2.page-title 설문 데이터 분석 요청
+            .col-auto.ml-auto.d-flex(*ngIf="surveyID!='new'")
+                a.btn.btn-border.pr-4.pl-4.br-10(routerLink="/survey")
+                    i.mr-2.fas.fa-list
+                    | 목록
+                a.btn.btn-red.btn-border.pr-4.pl-4.ml-2.br-10(*ngIf="!loaded", (click)="delete()")
+                    i.fas.fa-trash.mr-2
+                    | 삭제
+                a.btn.btn-full.pr-4.pl-4.ml-2.br-10(*ngIf="!loaded", (click)="request()")
+                    i.fas.fa-wand-magic-sparkles.mr-2
+                    | 저장
+    
+    .row.col-auto.mt-3
+        .card.br-10
+            .card-body
+                .info-form.row.mb-3.mt-3
+                    .col-md-2
+                        h4.required 설문 명
+                    .col-md-10
+                        input.form-control([(ngModel)]="info.title", type="text" placeholder="설문 명을 작성해주세요")
+                
+                .info-form.row.mb-3
+                    .col-md-2
+                        h4.required 설문 설명
+                    .col-md-10
+                        textarea.form-control([(ngModel)]="info.description" rows="4" placeholder="설문에 대해 간략히 작성해주세요")
+
+                .info-form.row.mb-3
+                    .col-md-2
+                        h4 설문지 파일
+                    .col-md-10
+                        .d-block.w-100
+                            ul.m-0.mb-2.mt-2(*ngIf="!loadedQ")
+                                li.pb-1
+                                    a((click)="download(info.question_file)") {{ info.question_file }}
+                                    .btn.btn-sm.btn-red.ml-2.pr-2.pl-2((click)="removeFile('question', info.question_file)", style="height: 20px;")
+                                        i.fa-solid.fa-xmark
+                            button.btn.btn-upload.btn-block(*ngIf="loadedQ", (click)="upload('question')") 파일 업로드   
+                
+                .info-form.row
+                    .col-md-2
+                        h4 설문 결과 파일
+                    .col-md-10
+                        .d-block.w-100
+                            ul.m-0.mb-2.mt-2(*ngIf="!loadedA")
+                                li.pb-1
+                                    a((click)="download(info.answer_file)") {{ info.answer_file }}
+                                    .btn.btn-sm.btn-red.ml-2.pr-2.pl-2((click)="removeFile('answer', info.answer_file)", style="height: 20px;")
+                                        i.fa-solid.fa-xmark
+                            button.btn.btn-upload.btn-block(*ngIf="loadedA", (click)="upload('answer')") 파일 업로드  
+            
+            .card-footer.d-flex
+                .ml-auto
+                button.btn.btn-full((click)="request()")
+                    i.fas.fa-wand-magic-sparkles.mr-2
+                    span(*ngIf="surveyID=='new'") 추가
+                    span(*ngIf="surveyID!='new'") 저장
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

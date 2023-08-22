@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.share.expert.form.list",
+    "title": "\ub370\uc774\ud130\uc14b \uacf5\uc720 - \uc804\ubb38\uac00 \uacf5\uc720\uc2ec\uc0ac \ubaa9\ub85d",
+    "namespace": "share.expert.form.list",
+    "viewuri": "/share/expert/form",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.share.expert.form.list",
+        "name": "PageShareExpertFormListComponent",
+        "path": "./page.share.expert.form.list/page.share.expert.form.list.component"
+    },
+    "ng": {
+        "selector": "wiz-page-share-expert-form-list",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-share-expert-form-list()"
+}

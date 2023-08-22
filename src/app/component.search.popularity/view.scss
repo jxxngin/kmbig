@@ -1,0 +1,23 @@
+.br-10 {
+    border-radius: 10px;
+}
+
+.card {
+    width: 290px;
+    height: 310px;
+
+    .card-body {
+        font-size: 16px;
+
+        .title {
+            color: #9496A1;
+            letter-spacing: 0px;
+            font-weight: bold;
+        }
+
+        tr {
+            max-height: 40px !important;
+            cursor: pointer;
+        }
+    }
+}

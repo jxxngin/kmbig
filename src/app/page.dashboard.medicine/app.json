@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dashboard.medicine",
+    "title": "\ub370\uc774\ud130\uc14b - \ub300\uc2dc\ubcf4\ub4dc - \ud55c\uc57d\uc7ac",
+    "namespace": "dashboard.medicine",
+    "viewuri": "/dashboard/medicine",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dashboard.medicine",
+        "name": "PageDashboardMedicineComponent",
+        "path": "./page.dashboard.medicine/page.dashboard.medicine.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dashboard-medicine",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dashboard-medicine()"
+}

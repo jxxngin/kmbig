@@ -1,0 +1,113 @@
+.container-full
+    .container-sub
+        .container-image
+            .row
+                .col-auto
+                    .content
+                        .content-menu
+                            a(routerLink="/main")
+                                i.fa-solid.fa-house(style="color:black;width:20px;height:20px")
+                            i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                            a.cursor-pointer.ml-2.text-menu(routerLink="/dashboard/device")
+                                span 데이터셋 대시보드
+                            i.fa-solid.fa-chevron-right.ml-2(style="color:#5B5D6B")
+                            span.ml-2.text-menu {{category_ls.title}} 데이터셋
+
+                        .content-menu-name
+                            span.text-menu-name {{category_ls.title}} 데이터셋
+
+                        .content-content
+                            span.text-content {{category_ls.content}}
+
+                        // .content-button((click)="download()")
+                        //     button.btn-data 다운로드 하기
+                            
+                .col-auto.pr-0
+                    .dataset-menu
+                        .card.menu-card(*ngFor="let item of dataset_ls;let i = index", (click)="click(item.id)")
+                            // a.cursor-pointer(style="text-decoration:none;font-size:16px;color:black") {{item.title}}
+                            span {{item.title}}
+
+    .container-sub2
+        .container-dashboard
+            .row
+                .pie-chart
+                    // wiz-component-chart-pie(title="건수별 / 연도별", [labels]="labels", [datas]="datas", [colors]="colors")
+                    wiz-component-chart-dashboar-years(title="연도별 데이터 건수")
+                .situation-bar.p-0
+                    wiz-component-chart-bar([dataset_ls]="dataset_ls")
+
+            .row
+                .intersection-chart
+                    // wiz-component-chart-intersection()
+                    .card.box-shadow(style="height:533px !important;")
+                        .card-body(style="padding-top:0px!important")
+                            wiz-portal-dataset-graph-yzimkzit()
+                .line-chart.pr-0
+                    // wiz-component-chart-line()
+                    .card.box-shadow(style="height:533px !important;")
+                        .card-body(style="padding-top:0px!important")
+                            wiz-portal-dataset-graph-uogbpzan()
+
+            .row
+                .card.analysis.box-shadow
+                    .row
+                        .doughnut-chart.p-0
+                            // wiz-component-chart-doughnut()
+                            // wiz-portal-dataset-graph-yzimkzit()
+                            wiz-portal-dataset-graph-dpljpprr()
+                        .card.chart-base.p-0
+                            .bar-chart-right(style="border-radius:10px")
+                                wiz-component-chart-bar-left()
+
+            .row(style="margin-bottom:50px")
+                .card.analysis2.box-shadow
+                    .row
+                        .constitution.p-0
+                            .row
+                                span(style="font-size:18px;font-family:'MAIN-M';margin-top:20px;margin-left:20px") 체질 - 알레르기
+                            .row
+                                .card.constitution-card.box-shadow
+                                    .card.constitution-card2.box-shadow
+                                        img(src="/assets/images/dashboard/tai-yang.svg")
+                                    span(style="margin-top:8px;color:white;font-family:'MAIN-M';font-size:18px;text-align:center") 태양인
+                                .card.constitution-card3.box-shadow
+                                    .card.constitution-card4.box-shadow
+                                        img(src="/assets/images/dashboard/tai-eum.svg")
+                                    span(style="margin-top:8px;color:black;font-family:'MAIN-M';font-size:18px;text-align:center") 태음인
+                            .row
+                                .card.constitution-card3.box-shadow(style="margin-left:30px")
+                                    .card.constitution-card4.box-shadow
+                                        img(src="/assets/images/dashboard/so-yang.svg")
+                                    span(style="margin-top:8px;color:black;font-family:'MAIN-M';font-size:18px;text-align:center") 소양인
+                                .card.constitution-card3.box-shadow
+                                    .card.constitution-card4.box-shadow
+                                        img(src="/assets/images/dashboard/so-eum.svg")
+                                    span(style="margin-top:8px;color:black;font-family:'MAIN-M';font-size:18px;text-align:center") 소음인
+                        .chart-base2
+                            wiz-portal-dataset-graph-qouvvjom()
+                            // wiz-component-chart-bar-many()
+
+    // #offcanvas-create.offcanvas.offcanvas-end.offcanvas-xl(tabindex="-1", aria-labelledby="offcanvasRightLabel")
+    .offcanvas.offcanvas-end.show([class.show]="tab", tabindex="-1")
+        .offcanvas-header
+            h5#offcanvasRightLabel.offcanvas-title 다운로드 하기
+            button.btn-close((click)="close()", type="button", data-bs-dismiss="offcanvas", aria-label="Close")
+        
+        .offcanvas-body
+            .form-group.row.mb-3
+                label.form-label.col-3.col-form-label.required Dataset List
+                .col
+                    input.form-control(type="text", placeholder="Dataset List")
+
+            .form-group.row.mb-3
+                label.form-label.col-3.col-form-label Dataset Download
+                .col
+                    textarea.form-control(placeholder="Dataset Download", rows=5)
+                    
+            .text-right
+                button.btn.kmbig-btn-orange(style="border-radius: 16px;", type="button")
+                    span Download
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

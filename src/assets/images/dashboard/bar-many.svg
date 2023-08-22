@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1195.064" height="462" viewBox="0 0 1195.064 462">
+  <g id="히스토그램" transform="translate(-12594 -7360.583)">
+    <g id="배경-수평선" transform="translate(12623 7368.5)">
+      <line id="수평선1" x2="1166.064" transform="translate(0 429.583)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수평선2" x2="1166.064" transform="translate(0 322.187)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수평선3" x2="1166" transform="translate(0 216.083)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수평선4" x2="1166.064" transform="translate(0 107.396)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수평선5" x2="1166.064" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+    </g>
+    <g id="배경-수직선" transform="translate(12623.5 7368.583)">
+      <line id="수직선1" y2="429.583" transform="translate(0 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선2" y2="429.583" transform="translate(119.7 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선3" y2="429.583" transform="translate(233.013 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선4" y2="429.583" transform="translate(349.519 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선5" y2="429.583" transform="translate(466.026 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선6" y2="430" transform="translate(582.5)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선7" y2="429.583" transform="translate(699.039 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선8" y2="429.583" transform="translate(815.545 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선9" y2="429.583" transform="translate(932.051 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선10" y2="429.583" transform="translate(1045.364 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+      <line id="수직선11" y2="429.583" transform="translate(1165.064 0.417)" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4 2"/>
+    </g>
+    <g id="왼쪽_거리-문자" data-name="왼쪽 거리-문자" transform="translate(12595 7360.583)">
+      <text id="_0" data-name="0" transform="translate(22 444)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="-8" y="0">0</tspan></text>
+      <text id="_25" data-name="25" transform="translate(22 336.618)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="-15" y="0">25</tspan></text>
+      <text id="_50" data-name="50" transform="translate(22 229.236)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="-16" y="0">50</tspan></text>
+      <text id="_75" data-name="75" transform="translate(22 121.854)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="-15" y="0">75</tspan></text>
+      <text id="_100" data-name="100" transform="translate(22 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="-22" y="0">100</tspan></text>
+    </g>
+    <g id="하단_거리-문자" data-name="하단 거리-문자" transform="translate(12671.9 7804.583)">
+      <text id="우유" transform="translate(0 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">우유</tspan></text>
+      <text id="계란흰자" transform="translate(109.3 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">계란흰자</tspan></text>
+      <text id="복숭아" transform="translate(227.6 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">복숭아</tspan></text>
+      <text id="바퀴벌레" transform="translate(338.36 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">바퀴벌레</tspan></text>
+      <text id="콩" transform="translate(470.488 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">콩</tspan></text>
+      <text id="고양이" transform="translate(576.241 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">고양이</tspan></text>
+      <text id="개" transform="translate(703.063 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">개</tspan></text>
+      <text id="새우" transform="translate(813.6 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">새우</tspan></text>
+      <text id="게" transform="translate(931.964 14)" fill="#333" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">게</tspan></text>
+      <text id="감자" transform="translate(1046.264 14)" fill="#333" font-size="12" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="0" y="0">감자</tspan></text>
+    </g>
+    <g id="기둥" transform="translate(12662 7401.078)">
+      <g id="자료1-기둥1" fill="#4f40f1" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V397.5a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7V396.5a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+      <g id="자료1-기둥2" transform="translate(120 176.505)" fill="#9187f6" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V221a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7V220a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+      <g id="자료1-기둥3" transform="translate(232.897 220.705)" fill="#7b7baa" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V176.8a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7V175.8a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+      <g id="자료1-기둥3-2" data-name="자료1-기둥3" transform="translate(349.345 242.805)" fill="#8a8ab4" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V154.7a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7V153.7a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+      <g id="자료1-기둥5" transform="translate(465.793 264.905)" fill="#9a9abe">
+        <path d="M7,0H33a7,7,0,0,1,7,7V132.6H0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M 7 1 C 3.691581726074219 1 1 3.69158935546875 1 7 L 1 131.6000061035156 L 39 131.6000061035156 L 39 7 C 39 3.69158935546875 36.30841827392578 1 33 1 L 7 1 M 7 0 L 33 0 C 36.86600112915039 0 40 3.134002685546875 40 7 L 40 132.6000061035156 L 0 132.6000061035156 L 0 7 C 0 3.134002685546875 3.133998870849609 0 7 0 Z" stroke="none" fill="rgba(0,0,0,0)"/>
+      </g>
+      <g id="자료1-기둥6" transform="translate(581.271 287.005)" fill="#a9a9c8">
+        <path d="M7,0H33a7,7,0,0,1,7,7V110.5H0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M 7 1 C 3.691585540771484 1 1 3.69158935546875 1 7 L 1 109.5 L 39 109.5 L 39 7 C 39 3.69158935546875 36.30841445922852 1 33 1 L 7 1 M 7 0 L 33 0 C 36.86598587036133 0 40 3.134002685546875 40 7 L 40 110.5 L 0 110.5 L 0 7 C 0 3.134002685546875 3.133998870849609 0 7 0 Z" stroke="none" fill="rgba(0,0,0,0)"/>
+      </g>
+      <g id="자료1-기둥7" transform="translate(697.719 309.105)" fill="#b9b9d2">
+        <path d="M7,0H33a7,7,0,0,1,7,7V88.4H0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M 7 1 C 3.69158935546875 1 1 3.69158935546875 1 7 L 1 87.40000152587891 L 39 87.40000152587891 L 39 7 C 39 3.69158935546875 36.30841064453125 1 33 1 L 7 1 M 7 0 L 33 0 C 36.86598968505859 0 40 3.134010314941406 40 7 L 40 88.40000152587891 L 0 88.40000152587891 L 0 7 C 0 3.134010314941406 3.133998870849609 0 7 0 Z" stroke="none" fill="rgba(0,0,0,0)"/>
+      </g>
+      <g id="자료1-기둥8" transform="translate(814.168 353.305)" fill="#c8c8dc">
+        <path d="M7,0H33a7,7,0,0,1,7,7V44.2H0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M 7 1 C 3.69158935546875 1 1 3.69158935546875 1 7 L 1 43.20000076293945 L 39 43.20000076293945 L 39 7 C 39 3.69158935546875 36.30841064453125 1 33 1 L 7 1 M 7 0 L 33 0 C 36.86598968505859 0 40 3.134010314941406 40 7 L 40 44.20000076293945 L 0 44.20000076293945 L 0 7 C 0 3.134010314941406 3.134010314941406 0 7 0 Z" stroke="none" fill="rgba(0,0,0,0)"/>
+      </g>
+      <g id="자료1-기둥9" transform="translate(927.064 375.405)" fill="#d8d8e6" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V22.1a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7V21.1a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+      <g id="자료1-기둥10" transform="translate(1047.064 388.665)" fill="#e8e8f0" stroke="rgba(0,0,0,0)" stroke-width="1">
+        <path d="M7,0H33a7,7,0,0,1,7,7V8.84a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" stroke="none"/>
+        <path d="M7,.5H33A6.5,6.5,0,0,1,39.5,7v.84a.5.5,0,0,1-.5.5H1a.5.5,0,0,1-.5-.5V7A6.5,6.5,0,0,1,7,.5Z" fill="none"/>
+      </g>
+    </g>
+    <g id="기둥위_텍스트_데이터_가치_" data-name="기둥위 텍스트(데이터 가치)" transform="translate(12674 7380.078)">
+      <text id="_80" data-name="80" transform="translate(0 13)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">80</tspan></text>
+      <text id="_50-2" data-name="50" transform="translate(120 189.505)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">50</tspan></text>
+      <text id="_40" data-name="40" transform="translate(232.871 234.024)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">40</tspan></text>
+      <text id="_35" data-name="35" transform="translate(349.305 256.018)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">35</tspan></text>
+      <text id="_30" data-name="30" transform="translate(465.74 278.018)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">30</tspan></text>
+      <text id="_25-2" data-name="25" transform="translate(581.205 299.601)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">25</tspan></text>
+      <text id="_20" data-name="20" transform="translate(697.64 321.932)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">20</tspan></text>
+      <text id="_10" data-name="10" transform="translate(814.075 366.305)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">10</tspan></text>
+      <text id="_5" data-name="5" transform="translate(931.064 388.665)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">5</tspan></text>
+      <text id="_2" data-name="2" transform="translate(1051.064 401.665)" fill="#333" font-size="14" font-family="Arial"><tspan x="0" y="0">2</tspan></text>
+    </g>
+  </g>
+</svg>

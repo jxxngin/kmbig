@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.explaination.yearly",
+    "title": "\uc0c1\uc138 \uc124\uba85 - \uc5f0\ub3c4\ubcc4 \uadf8\ub798\ud504",
+    "namespace": "explaination.yearly",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.explaination.yearly",
+        "name": "ComponentExplainationYearlyComponent",
+        "path": "./component.explaination.yearly/component.explaination.yearly.component"
+    },
+    "ng": {
+        "selector": "wiz-component-explaination-yearly",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-explaination-yearly()"
+}

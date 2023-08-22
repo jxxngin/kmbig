@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.card.notification",
+    "title": "\uce74\ub4dc - \uc54c\ub78c",
+    "namespace": "card.notification",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.card.notification",
+        "name": "ComponentCardNotificationComponent",
+        "path": "./component.card.notification/component.card.notification.component"
+    },
+    "ng": {
+        "selector": "wiz-component-card-notification",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-card-notification()"
+}

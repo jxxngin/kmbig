@@ -1,0 +1,106 @@
+.container-full.p-0
+    .container-sub
+        .container-search
+            .search.row
+                wiz-component-search()
+
+    .container-sub2
+        .container-search-list
+            .row
+                .col-md-2
+                    .container-filter.box-shadow.br-10
+                        .card
+                            .card-header
+                                h2.col.mb-0 상세 검색
+                                button.btn.btn-refresh.col-auto.p-0([ngClass]="{ 'rotate-animation': isAnimating }", (click)="refresh()")
+                                    i.fa-solid.fa-rotate-right
+                            .card-body.search-filter
+                                label.form-label 데이터 분류
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let item of facet.category; let i = index;")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.category[item.name]", (ngModelChange)="pageLoad(1)")
+                                        span.form-check-label {{item.name}} 데이터셋
+                                        span.ml-auto.mr-2 {{advfacet.category[item.name]}}
+
+                            .card-body.search-filter
+                                label.form-label 데이터 관리 부서
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let item of facet.department;")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.department[item.name]", (ngModelChange)="pageLoad(1)")
+                                        span.form-check-label {{item.name}}
+                                        span.ml-auto.mr-2 {{advfacet.department[item.name]}}
+
+                            .card-body.search-filter
+                                label.form-label 자료 유형
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let item of facet.filetype;")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.filetype[item.name]", (ngModelChange)="pageLoad(1)")
+                                        span.form-check-label {{item.name}}
+                                        span.ml-auto.mr-2 {{advfacet.filetype[item.name]}}
+
+                            .card-body.search-filter
+                                label.form-label 데이터 공개 여부
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let item of facet.visibility;")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.visibility[item.name]", (ngModelChange)="pageLoad(1)")
+                                        span.form-check-label {{item.name}}
+                                        span.ml-auto.mr-2 {{advfacet.visibility[item.name]}}
+
+                .col-md-10
+                    .card.br-10.box-shadow
+                        .card-body
+                            .input-group.align-items-center
+                                .col
+                                    h2.mb-0(*ngIf="search.text === ''") 전체 ({{total}})
+                                    h2.mb-0(*ngIf="search.text !== ''") "{{search.text}}" 검색 결과 ({{total}})
+                                .col-auto
+                                    select.form-select.pl-3([(ngModel)]="mode", (change)="pageLoad(1)")
+                                        option(selected, value="default") 정확도순
+                                        option(value="update") 최신순
+                                        option(value="view") 조회순
+                                        option(value="download") 다운로드순
+
+                            .card.ch.mt-3(*ngFor="let item of data;", (click)="click(item)")
+                                .card-body(style="padding: 0px 10px;")
+                                    .row.h-100
+                                        .col.d-flex.align-items-center.pl-4
+                                            .container-info
+                                                .row
+                                                    .datatype {{item.category}} 데이터셋
+                                                .row.mt-2
+                                                    .title {{item.title}}
+                                                .row.mt-3
+                                                    .datatext {{item.summary}}
+                                                .row.mt-4.key-info
+                                                    .col-auto
+                                                        .keyword 키워드
+                                                    .col
+                                                        .wrap-text.pl-0
+                                                            span.btn-sm.tag.mr-1.px-2(*ngFor="let tag of item.tags;") # {{tag}}
+                                        .pl-4.card-info.col-auto
+                                            table.no-hover
+                                                tr
+                                                    th.text-left 제공기관
+                                                    td.pl-4.text-left {{item.department === "미분류" ? "-" : item.department}}
+                                                tr
+                                                    th.text-left 등록일
+                                                    td.pl-4.text-left {{item.created}}
+                                                tr
+                                                    th.text-left 수정일
+                                                    td.pl-4.text-left {{item.updated}}
+                                                tr
+                                                    th.text-left 조회수
+                                                    td.pl-4.text-left {{item.view_count}}
+                                                tr
+                                                    th.text-left 다운로드
+                                                    td.pl-4.text-left {{item.download_count}}
+                                                tr
+                                                    th.text-left 파일 정보
+                                                    td.pl-4.text-left {{item.filetype}}
+
+                    .mb-4
+                    wiz-component-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="pageLoad($event)")
+                    .mb-6
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

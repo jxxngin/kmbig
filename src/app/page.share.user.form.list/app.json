@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.share.user.form.list",
+    "title": "\ub370\uc774\ud130\uc14b \uacf5\uc720 - \ub0b4 \uacf5\uc720\uc694\uccad \ubaa9\ub85d",
+    "namespace": "share.user.form.list",
+    "viewuri": "/share/user/form",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.share.user.form.list",
+        "name": "PageShareUserFormListComponent",
+        "path": "./page.share.user.form.list/page.share.user.form.list.component"
+    },
+    "ng": {
+        "selector": "wiz-page-share-user-form-list",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-share-user-form-list()"
+}

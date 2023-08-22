@@ -1,0 +1,22 @@
+.info-form.first-child {
+    border-top: 2px solid #000000;
+}
+
+.info-form {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(110, 117, 130, 0.2);
+}
+
+.row {
+    --tblr-gutter-x: 1rem;
+    --tblr-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--tblr-gutter-y));
+    margin-right: calc(-.5 * var(--tblr-gutter-x));
+    margin-left: calc(-.5 * var(--tblr-gutter-x));
+}
+
+.comment-info {
+    align-content: right;
+}

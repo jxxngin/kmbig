@@ -1,0 +1,23 @@
+{
+    "mode": "portal",
+    "id": "report.gvtuwkdi",
+    "title": "\ubcf4\uace0\uc11c - UGT1A1 \uc2e4\ud5d8 \ubcf4\uace0\uc11c",
+    "namespace": "report.gvtuwkdi",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-macro-report-gvtuwkdi([path]=\"\")",
+    "ng.build": {
+        "id": "portal.macro.report.gvtuwkdi",
+        "name": "PortalMacroReportGvtuwkdiComponent",
+        "path": "./portal.macro.report.gvtuwkdi/portal.macro.report.gvtuwkdi.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-macro-report-gvtuwkdi",
+        "inputs": [
+            "path"
+        ],
+        "outputs": []
+    },
+    "type": "app"
+}

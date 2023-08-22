@@ -1,0 +1,44 @@
+.form-select {
+    border: 1px solid #C9C5F0;
+    border-radius: 20px;
+}
+
+.btn-request {
+    background-color: #E2E4F0;
+    color: var(--wiz-color-navy);
+    border-radius: 10px;
+    border: 1px solid #E2E4F0;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-allow {
+    background-color: #64CF7C;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #64CF7C;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-reject {
+    background-color: #F0142F;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #F0142F;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.btn-process {
+    background-color: #C9C5F0;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid #C9C5F0;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.box-shadow {
+    box-shadow: 0px 3px 24px #E3E6EC;
+}

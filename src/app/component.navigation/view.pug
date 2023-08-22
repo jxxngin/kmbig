@@ -1,0 +1,167 @@
+nav.navbar.navbar-expand-lg.p-0.isDesktop(style="background:white;margin:auto")
+    .container-fluid(style="padding-left:70px;padding-right:70px")
+        a.navbar-brand(href="/main")
+            img(src="/assets/images/kmbig_logo.svg", style="width:130px;height30px")
+
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0(style="padding-left:60px;font-size:18px")
+                li.nav-item(*ngFor="let item of menu_ls;let i = index", [routerLink]="item.url", (click)="collapse()")
+                    .d-flex
+                        a.nav-link
+                            span.word-break([ngClass]="highlight(item.index) ? 'highlight':'text-default'") {{item.name}}  
+
+            .d-flex
+                ng-container(*ngIf="service.auth.show(false)")
+                    a.btn.login(routerLink="/login") 로그인
+                ng-container(*ngIf="service.auth.show(true)")
+                    span.mt-2.mr-3 {{username}} 님
+                    .notification.mr-3
+                        i.fa-regular.fa-bell((click)="display()")
+                            span.badge.bg-red.badge-blink(*ngIf="newNoti")
+                        .noti-card([ngClass]="showNoti ? '' : 'd-none'")
+                            wiz-component-card-notification
+                    a.btn.logout.mr-2(href="/mypage") 내 정보
+                    a.btn.logout(href="/auth/logout") 로그아웃
+
+aside.navbar.navbar-vertical.navbar-expand-lg.navbar-side.isPhone
+    .container-fluid(style="padding-left:70px;padding-right:70px")
+        a.navbar-brand(href="/main")
+            img(src="/assets/images/kmbig_logo.svg", style="width:130px;height30px")
+        .right.d-flex
+            .notification.mr-3
+                i.fa-regular.fa-bell((click)="display()")
+                    span.badge.bg-red.badge-blink(*ngIf="newNoti")
+                .noti-card([ngClass]="showNoti ? '' : 'd-none'")
+                    wiz-component-card-notification
+            button.navbar-toggler(type="button", (click)="isMenuCollapsed = !isMenuCollapsed")
+                span.navbar-toggler-icon
+        
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            .user-profile
+                .card
+                    .card-body.pl-4.pr-4(*ngIf="service.auth.session.name")
+                        .row.align-items-center(style="padding-left: 40px;")
+                            .col
+                                .userinfo
+                                    .name {{service.auth.session.name}}
+                                    .mail {{service.auth.session.email}}
+
+                    .card-footer
+                        .clicks(*ngIf="service.auth.session.name")
+                            a.click(routerLink='/mypage', (click)="collapse()") 내 정보
+                            a.click(href='/auth/logout') 로그아웃
+                        .clicks(*ngIf="!service.auth.session.name")
+                            a.click(href='/login') 로그인
+            
+            ul.navbar-nav
+                li.nav-item.dropdown([ngClass]="{'active': menuActive('/page')}")
+                    .d-flex
+                        .nav-link(*ngIf="userRole!='admin'", routerLink='/page/intro', (click)="collapse()")
+                            span.nav-link-title KMBIG 소개
+                        .nav-link(*ngIf="userRole=='admin'", routerLink='/page/edit/intro', (click)="collapse()")
+                            span.nav-link-title KMBIG 소개
+                    ul.dropdown-menu(*ngIf="userRole!='admin'")
+                        li
+                            a.dropdown-item(routerLink='/page/intro', routerLinkActive="active", (click)="collapse()")
+                                span KMBIG 소개
+                        li
+                            a.dropdown-item(routerLink='/page/help', routerLinkActive="active", (click)="collapse()")
+                                span 이용안내
+                        li
+                            a.dropdown-item(routerLink='/page/term', routerLinkActive="active", (click)="collapse()")
+                                span 이용약관
+                        li
+                            a.dropdown-item(routerLink='/page/privacy', routerLinkActive="active", (click)="collapse()")
+                                span 개인정보처리방침
+                        li
+                            a.dropdown-item(routerLink='/page/service', routerLinkActive="active", (click)="collapse()")
+                                span 연계서비스
+                        li
+                            a.dropdown-item(routerLink='/page/request', routerLinkActive="active", (click)="collapse()")
+                                span 제공신청안내
+                    ul.dropdown-menu(*ngIf="userRole==='admin'")
+                        li
+                            a.dropdown-item(href="/page/edit/intro", [ngClass]="currentRoute == '/page/edit/intro' ? 'active':''", (click)="collapse()")
+                                span KMBIG 소개
+                        li
+                            a.dropdown-item(href="/page/edit/help", [ngClass]="currentRoute == '/page/edit/help' ? 'active':''", (click)="collapse()")
+                                span 이용안내
+                        li
+                            a.dropdown-item(href="/page/edit/term", [ngClass]="currentRoute == '/page/edit/term' ? 'active':''", (click)="collapse()")
+                                span 이용약관
+                        li
+                            a.dropdown-item(href="/page/edit/privacy", [ngClass]="currentRoute == '/page/edit/privacy' ? 'active':''", (click)="collapse()")
+                                span 개인정보처리방침
+                        li
+                            a.dropdown-item(href="/page/edit/service", [ngClass]="currentRoute == '/page/edit/service' ? 'active':''", (click)="collapse()")
+                                span 연계서비스
+                        li
+                            a.dropdown-item(href="/page/edit/request", [ngClass]="currentRoute == '/page/edit/request' ? 'active':''", (click)="collapse()")
+                                span 제공신청안내
+
+                li.nav-item.dropdown([ngClass]="{'active': menuActive('/dashboard')}")
+                    .d-flex
+                        .nav-link(routerLink='/dashboard/device', (click)="collapse()")
+                            span.nav-link-title 데이터셋 대시보드
+                    ul.dropdown-menu
+                        li(*ngFor="let board of dashboard_ls;")
+                            a.dropdown-item([routerLink]="board.url", routerLinkActive="active", (click)="collapse()")
+                                span {{board.name}}
+                        // li
+                        //     a.dropdown-item(routerLink='/dashboard/device', routerLinkActive="active", (click)="collapse()")
+                        //         span 기기 데이터셋
+                        // li
+                        //     a.dropdown-item(routerLink='/dashboard/medicine', routerLinkActive="active", (click)="collapse()")
+                        //         span 한약재 데이터셋
+                        // li
+                        //     a.dropdown-item(routerLink='/dashboard/multiple', routerLinkActive="active", (click)="collapse()")
+                        //         span 연계 데이터셋
+
+                li.nav-item.dropdown(*ngIf="userRole!='none'", [ngClass]="{'active': menuActive('/share')}")
+                    .d-flex
+                        .nav-link(routerLink='/share/user/form', (click)="collapse()")
+                            span.nav-link-title 데이터셋 공유
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(routerLink='/share/user/form', routerLinkActive="active", (click)="collapse()")
+                                span 내 공유요청 목록
+                        li(*ngIf="service.auth.session.is_expert === 1")
+                            a.dropdown-item(routerLink='/share/expert/form', routerLinkActive="active", (click)="collapse()")
+                                span 전문가 공유심사 목록
+                        li
+                            a.dropdown-item(routerLink='/share/drive', routerLinkActive="active", (click)="collapse()")
+                                span 연구자 서랍
+
+                li.nav-item(routerLink='/dataset/search', routerLinkActive="active", (click)="collapse()")
+                    .d-flex
+                        .nav-link
+                            span.nav-link-title 데이터셋 검색
+
+                li.nav-item(routerLink='/survey', routerLinkActive="active", (click)="collapse()")
+                    .d-flex
+                        .nav-link
+                            span.nav-link-title 설문 분석
+
+                // li.nav-item.dropdown([ngClass]="{'active': menuActive('/survey')}", *ngIf="userRole!='none'")
+                //     .d-flex
+                //         .nav-link(routerLink='/survey/ocr', (click)="collapse()")
+                //             span.nav-link-title 설문
+                //     ul.dropdown-menu
+                //         li
+                //             a.dropdown-item(routerLink='/survey/ocr', routerLinkActive="active", (click)="collapse()")
+                //                 span OCR
+                //         li
+                //             a.dropdown-item(routerLink='/survey/analysis', routerLinkActive="active", (click)="collapse()")
+                //                 span 설문 분석
+
+                li.nav-item.dropdown([ngClass]="{'active': menuActive('/community')}")
+                    .d-flex
+                        .nav-link(routerLink='/community/notice/list', (click)="collapse()")
+                            span.nav-link-title 커뮤니티
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(routerLink='/community/notice/list', routerLinkActive="active", (click)="collapse()")
+                                span 공지사항
+                        li
+                            a.dropdown-item(routerLink='/community/qna/list', routerLinkActive="active", (click)="collapse()")
+                                span 문의사항

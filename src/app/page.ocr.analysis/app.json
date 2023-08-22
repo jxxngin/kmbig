@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.ocr.analysis",
+    "title": "OCR - analysis",
+    "namespace": "ocr.analysis",
+    "viewuri": "/ocr/analysis/:id",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.ocr.analysis",
+        "name": "PageOcrAnalysisComponent",
+        "path": "./page.ocr.analysis/page.ocr.analysis.component"
+    },
+    "ng": {
+        "selector": "wiz-page-ocr-analysis",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-ocr-analysis()"
+}

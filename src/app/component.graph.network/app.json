@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.graph.network",
+    "title": "\uba54\uc778 - \ub124\ud2b8\uc6cc\ud06c \uadf8\ub798\ud504",
+    "namespace": "graph.network",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.graph.network",
+        "name": "ComponentGraphNetworkComponent",
+        "path": "./component.graph.network/component.graph.network.component"
+    },
+    "ng": {
+        "selector": "wiz-component-graph-network",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-graph-network()"
+}

@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.bar.left",
+    "title": "\ucc28\ud2b8 - Bar - left",
+    "namespace": "chart.bar.left",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.bar.left",
+        "name": "ComponentChartBarLeftComponent",
+        "path": "./component.chart.bar.left/component.chart.bar.left.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-bar-left",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-bar-left([title]=\"\")"
+}

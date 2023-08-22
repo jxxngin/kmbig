@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.loading.hexa",
+    "title": "KMBIG - \ud5e5\uc0ac \ub85c\ub529",
+    "namespace": "loading.hexa",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.loading.hexa",
+        "name": "ComponentLoadingHexaComponent",
+        "path": "./component.loading.hexa/component.loading.hexa.component"
+    },
+    "ng": {
+        "selector": "wiz-component-loading-hexa",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-loading-hexa()"
+}

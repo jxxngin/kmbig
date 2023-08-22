@@ -1,0 +1,25 @@
+.border-shadow.d-flex.input-group.search-bar
+    input.form-control(
+        type="text",
+        placeholder="검색어를 입력하세요.",
+        (keydown)="onKeyDown($event)",
+        [(ngModel)]="searchText",
+        (ngModelChange)="doSearch()")
+    a.btn.btn-search((click)="onSearch()")
+        i.fa-solid.fa-magnifying-glass.text-dark
+    
+    .autocomplete-wrap.pt-4(
+        *ngIf="filtered.length > 0", 
+        (mouseleave)="currentSearch(null)")
+            .box.my-4
+                .autocomplete-item.m-2(
+                    *ngFor="let item of filtered; let i = index", 
+                    (mousedown)="onClick(i)",
+                    [ngClass]="{'current-dataset': currentIndex === i}", 
+                    (mouseover)="currentSearch(i)",
+                ) {{item}}
+
+.recommendation
+    span(style="margin-right:10px;") 추천 검색어
+    button.btn-tag.mr-1.px-2(*ngFor="let tag of tags;", (click)="recommend(tag)") #
+        span {{tag}}

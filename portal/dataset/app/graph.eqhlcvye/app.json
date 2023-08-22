@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.eqhlcvye",
+    "title": "\uadf8\ub798\ud504 - 3D \uccb4\ud615 \uce21\uc815",
+    "namespace": "graph.eqhlcvye",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-eqhlcvye()",
+    "ng.build": {
+        "id": "portal.dataset.graph.eqhlcvye",
+        "name": "PortalDatasetGraphEqhlcvyeComponent",
+        "path": "./portal.dataset.graph.eqhlcvye/portal.dataset.graph.eqhlcvye.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-eqhlcvye",
+        "inputs": [],
+        "outputs": []
+    }
+}

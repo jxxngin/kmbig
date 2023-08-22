@@ -1,0 +1,66 @@
+.network-graph
+    .card
+        .card-header
+            .row
+                .col-auto(*ngFor="let item of list;let i = index")
+                    button([ngClass]="dataset==item ? 'btn-data':'btn-none'", (click)="change(item)")
+                        span.mx-2 {{item}}
+                        
+        .card-body(*ngIf="dataset=='기기 데이터셋'")
+            img(src="/assets/images/main/network_graph_bin.svg")
+            button.btn-text(style="top:70px;left:255px", (click)="onClick(4)") 알레르기
+                br
+                span 검사
+            button.btn-text(style="top:150px;left:92px", (click)="onClick(1)") 체질
+
+            button.btn-text(style="top:27px;left:432px", (click)="onClick(18)") 피부 유수분
+            button.btn-text(style="top:27px;left:872px", (click)="onClick(8)") 자세 평가
+
+            button.btn-text(style="top:260px;left:273px", (click)="onClick(12)") 전신 체온
+                br
+                span 측정
+            button.btn-text(style="top:328px;left:372px", (click)="onClick(15)") 귀 체온계
+
+            button.btn-text(style="top:330px;left:173px", (click)="onClick(13)") 설진기
+            button.btn-text(style="top:400px;left:38px", (click)="onClick(5)") 구취 분석
+            button.btn-text(style="top:467px;left:282px", (click)="onClick(17)") 타액 분비량
+
+            button.btn-text(style="top:27px;left:1053px", (click)="onClick(9)") 대사량
+            button.btn-text(style="top:122px;left:1123px", (click)="onClick(2)") 3D 체형
+                br
+                span 측정
+            button.btn-text(style="top:182px;left:1240px", (click)="onClick(19)") 신장
+                br
+                span 몸무게
+            button.btn-text(style="top:247px;left:1105px", (click)="onClick(20)") 체성분
+                br
+                span 분석
+
+            button.btn-text(style="top:284px;left:1002px", (click)="onClick(6)") 심박변이도
+                br
+                span 검사
+            button.btn-text(style="top:250px;left:1320px", (click)="onClick(3)") 복진
+            button.btn-text(style="top:360px;left:1290px", (click)="onClick(0)") 혈압
+            button.btn-text(style="top:417px;left:1008px", (click)="onClick(10)") 맥진
+
+            button.btn-text(style="top:474px;left:885px", (click)="onClick(7)") 환기량
+            button.btn-text(style="top:463px;left:1115px", (click)="onClick(14)") 요화학
+                br
+                span 분석
+            button.btn-text(style="top:460px;left:1240px", (click)="onClick(11)") 활성 산소
+                br
+                span 분석
+            button.btn-text(style="top:512px;left:460px", (click)="onClick(16)") 소변의 색
+        
+        .card-body.d-flex.align-items-center.justify-content-center(*ngIf="dataset == '혈자리 데이터셋'")
+            wiz-component-main-acupuncturepoint()
+
+        .card-body.d-flex.align-items-center.justify-content-center(*ngIf="dataset=='한약재 데이터셋'")
+            p 아직 준비중 입니다
+
+        .card-body.d-flex.align-items-center.justify-content-center(*ngIf="dataset=='의료기관 데이터셋'")
+            img(src="/assets/images/example/medical.jpeg", style="width:500px;height:600px")
+
+        // .card-body.d-flex.align-items-center.justify-content-center(*ngIf="dataset!='기기 데이터셋' && dataset!='혈자리 데이터셋'")
+        //     p 아직 준비중 입니다
+            

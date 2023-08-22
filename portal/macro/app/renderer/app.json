@@ -1,0 +1,24 @@
+{
+    "mode": "portal",
+    "id": "renderer",
+    "title": "Renderer",
+    "namespace": "renderer",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "type": "app",
+    "template": "wiz-portal-macro-renderer([target]=\"\", [path]=\"\")",
+    "ng.build": {
+        "id": "portal.macro.renderer",
+        "name": "PortalMacroRendererComponent",
+        "path": "./portal.macro.renderer/portal.macro.renderer.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-macro-renderer",
+        "inputs": [
+            "target",
+            "path"
+        ],
+        "outputs": []
+    }
+}

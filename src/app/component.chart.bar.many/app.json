@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.bar.many",
+    "title": "\ucc28\ud2b8 - Bar - many",
+    "namespace": "chart.bar.many",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.bar.many",
+        "name": "ComponentChartBarManyComponent",
+        "path": "./component.chart.bar.many/component.chart.bar.many.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-bar-many",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-bar-many([title]=\"\")"
+}

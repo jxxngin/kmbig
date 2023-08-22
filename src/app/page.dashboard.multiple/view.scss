@@ -1,0 +1,60 @@
+.container-full {
+    min-width: 1920px;
+    height: 100%;
+    overflow: auto;
+
+    .container-sub {
+        width: 100%;
+        background: no-repeat center/100% url("/assets/images/dashboard/bubble.png");
+
+        .container-image {
+            width: 1780px;
+            height: 480px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .content {
+                height: 100%;
+                width: 100%;
+
+                .content-menu {
+                    padding-top: 112px;
+                }
+
+                .content-menu-name {
+                    padding-top: 15px;
+                }
+
+                .content-content {
+                    padding-top: 30px;
+                    width: 922px;
+                }
+            }
+        }
+    }
+}
+
+.text-menu {
+    color: #5B5B6D;
+    font-size: 16px;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.text-menu-name {
+    color: black;
+    font-size: 52px;
+    font-weight: bold;
+    font-family: "MAIN-B";
+    letter-spacing: 0px;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.text-content {
+    color: #404252;
+    font-size: 22px;
+    line-height: 180%;
+    word-break: keep-all;
+}

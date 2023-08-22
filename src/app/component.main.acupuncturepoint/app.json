@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.main.acupuncturepoint",
+    "title": "\uba54\uc778 - \ud608\uc790\ub9ac \ub370\uc774\ud130\uc14b",
+    "namespace": "main.acupuncturepoint",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.main.acupuncturepoint",
+        "name": "ComponentMainAcupuncturepointComponent",
+        "path": "./component.main.acupuncturepoint/component.main.acupuncturepoint.component"
+    },
+    "ng": {
+        "selector": "wiz-component-main-acupuncturepoint",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-main-acupuncturepoint()"
+}

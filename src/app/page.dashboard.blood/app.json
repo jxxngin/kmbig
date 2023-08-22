@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dashboard.blood",
+    "title": "\ub370\uc774\ud130\uc14b - \ub300\uc2dc\ubcf4\ub4dc - \ud608\uc790\ub9ac",
+    "namespace": "dashboard.blood",
+    "viewuri": "/dashboard/blood",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dashboard.blood",
+        "name": "PageDashboardBloodComponent",
+        "path": "./page.dashboard.blood/page.dashboard.blood.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dashboard-blood",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dashboard-blood()"
+}

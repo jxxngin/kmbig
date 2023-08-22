@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.dashboar.years",
+    "title": "\ub300\uc2dc\ubcf4\ub4dc - \uc5f0\ub3c4\ubcc4 \uadf8\ub798\ud504",
+    "namespace": "chart.dashboar.years",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.chart.dashboar.years",
+        "name": "ComponentChartDashboarYearsComponent",
+        "path": "./component.chart.dashboar.years/component.chart.dashboar.years.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-dashboar-years",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-dashboar-years([title]=\"\")"
+}

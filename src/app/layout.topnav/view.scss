@@ -1,0 +1,36 @@
+.wiz-page {
+    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    align-items: center;
+}
+
+.wiz-navbar {
+    // justify-content: center;
+    width: 100%;
+    background: white;
+    // border: 1px solid #D2D4DA;
+}
+
+.container-mainmenu {
+    border-bottom: 1px solid #D2D4DA;
+}
+
+.cotainer-submenu {
+    background: white;
+    border-bottom: 1px solid #D2D4DA;
+}
+
+.wiz-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.wiz-view {
+    // min-width:1920px;
+    // position:relative;
+}

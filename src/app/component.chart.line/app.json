@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.line",
+    "title": "\ucc28\ud2b8 - Line",
+    "namespace": "chart.line",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.line",
+        "name": "ComponentChartLineComponent",
+        "path": "./component.chart.line/component.chart.line.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-line",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-line([title]=\"\")"
+}

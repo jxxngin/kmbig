@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "type": "app",
+    "id": "edit",
+    "title": "\ucee4\ubba4\ub2c8\ud2f0 - \uae00\uc4f0\uae30",
+    "namespace": "edit",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-community-edit()",
+    "ng.build": {
+        "id": "portal.community.edit",
+        "name": "PortalCommunityEditComponent",
+        "path": "./portal.community.edit/portal.community.edit.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-community-edit",
+        "inputs": [],
+        "outputs": []
+    }
+}

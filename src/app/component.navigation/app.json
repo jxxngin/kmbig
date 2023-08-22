@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.navigation",
+    "title": "\ub124\ube44\uac8c\uc774\uc158",
+    "namespace": "navigation",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.navigation",
+        "name": "ComponentNavigationComponent",
+        "path": "./component.navigation/component.navigation.component"
+    },
+    "ng": {
+        "selector": "wiz-component-navigation",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-navigation([title]=\"\")"
+}

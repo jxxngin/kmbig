@@ -1,0 +1,52 @@
+.pt-4.pb-4.m-auto(style="max-width: 960px;")
+    .page-header
+        .row.align-items-center.mb-3
+            .col-auto
+                .page-pretitle 커뮤니티
+                h2.page-title {{category == 'notice' ? '공지사항' : '문의게시판'}}
+
+            .col-auto.ml-auto.d-print-none
+                .d-flex
+                    a.btn.btn-border.ml-2.d-none.d-sm-inline-block(routerLink="/community/{{category}}/list")
+                        i.mr-2.fas.fa-list
+                        | 목록
+
+                    a.btn.btn-border.ml-2.d-none.d-sm-inline-block(routerLink="/community/{{category}}/view/{{post.id}}")
+                        i.mr-2.fas.fa-eye
+                        | 게시글
+
+                    a.btn.ml-2.d-none.d-sm-inline-block((click)="update()")
+                        i.mr-2.fas.fa-save
+                        span(*ngIf="login") 저장하기
+                        span(*ngIf="!login") 등록하기
+
+    .info-form.row.first-child
+        .col-md-2
+            h4 제목
+        .col-md-8
+            input.form-control(
+                type="text", 
+                placeholder="50자 이내 입력 가능", 
+                maxlength='50', 
+                [(ngModel)]="post.title")
+        .col-md-2
+            select.form-select([(ngModel)]="post.priority")
+                option(value='0') 일반
+                option(*ngIf="login.role == 'admin'", value='1') 필독
+        
+    .info-form.row
+        .col-md-2
+            h4 첨부파일
+        .col-md-8
+            form#file
+                input#file-upload.form-control(type='file', name='file[]', multiple)
+        .col-md-2
+            button.btn.btn-square.btn-block((click)='upload()') 업로드
+        
+    .editor-area.mt-4.mb-4
+        textarea#editor([(ngModel)]="post.content") {{post.content}}
+        
+    .text-right
+        button.btn.btn-border.pr-4.pl-4.ml-1(*ngIf="post.id", (click)="del()") 삭제
+        button.btn.pr-4.pl-4.ml-1(*ngIf="post.id", (click)="update()") 저장하기
+        button.btn.pr-4.pl-4.ml-1(*ngIf="!post.id", (click)="update()") 등록

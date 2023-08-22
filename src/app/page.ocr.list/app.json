@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.ocr.list",
+    "title": "OCR - list",
+    "namespace": "ocr.list",
+    "viewuri": "/ocr/list",
+    "category": "kmbig",
+    "preview": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.ocr.list",
+        "name": "PageOcrListComponent",
+        "path": "./page.ocr.list/page.ocr.list.component"
+    },
+    "ng": {
+        "selector": "wiz-page-ocr-list",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-ocr-list()"
+}

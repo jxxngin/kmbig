@@ -1,0 +1,16 @@
+<svg id="태음인" xmlns="http://www.w3.org/2000/svg" width="75" height="83" viewBox="0 0 75 83">
+  <circle id="타원_334" data-name="타원 334" cx="37.5" cy="37.5" r="37.5" transform="translate(0 4)" fill="#d2cffb" opacity="0.351"/>
+  <g id="그룹_553" data-name="그룹 553" transform="translate(22.578 -0.03)">
+    <g id="그룹_536" data-name="그룹 536">
+      <circle id="타원_330" data-name="타원 330" cx="7.5" cy="7.5" r="7.5" transform="translate(7.423 0.029)"/>
+      <g id="그룹_532" data-name="그룹 532" transform="translate(0 20.644)">
+        <rect id="사각형_339" data-name="사각형 339" width="10" height="57" transform="translate(9.423 5.386)"/>
+        <path id="사각형_340" data-name="사각형 340" d="M7,0H22a7,7,0,0,1,7,7V32a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" transform="translate(0.423 0.386)"/>
+      </g>
+    </g>
+    <g id="타원_331" data-name="타원 331" transform="translate(0.423 17.029)" fill="rgba(242,116,141,0.4)" stroke="#f2748d" stroke-width="2">
+      <ellipse cx="14.5" cy="22" rx="14.5" ry="22" stroke="none"/>
+      <ellipse cx="14.5" cy="22" rx="13.5" ry="21" fill="none"/>
+    </g>
+  </g>
+</svg>

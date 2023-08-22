@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.tcqapgik",
+    "title": "\uadf8\ub798\ud504 - \uccb4\uc9c8 \uac80\uc0ac (\uccb4\ud615)",
+    "namespace": "graph.tcqapgik",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-tcqapgik()",
+    "ng.build": {
+        "id": "portal.dataset.graph.tcqapgik",
+        "name": "PortalDatasetGraphTcqapgikComponent",
+        "path": "./portal.dataset.graph.tcqapgik/portal.dataset.graph.tcqapgik.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-tcqapgik",
+        "inputs": [],
+        "outputs": []
+    }
+}

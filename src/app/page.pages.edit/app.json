@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.pages.edit",
+    "title": "KMBIG \uc18c\uac1c - \ud3b8\uc9d1",
+    "namespace": "pages.edit",
+    "viewuri": "/page/edit/:category",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.pages.edit",
+        "name": "PagePagesEditComponent",
+        "path": "./page.pages.edit/page.pages.edit.component"
+    },
+    "ng": {
+        "selector": "wiz-page-pages-edit",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-pages-edit()"
+}

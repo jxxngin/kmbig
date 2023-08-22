@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.bdbeucfs",
+    "title": "\uadf8\ub798\ud504 - \ud608\uc555 \uce21\uc815",
+    "namespace": "graph.bdbeucfs",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-bdbeucfs()",
+    "ng.build": {
+        "id": "portal.dataset.graph.bdbeucfs",
+        "name": "PortalDatasetGraphBdbeucfsComponent",
+        "path": "./portal.dataset.graph.bdbeucfs/portal.dataset.graph.bdbeucfs.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-bdbeucfs",
+        "inputs": [],
+        "outputs": []
+    }
+}

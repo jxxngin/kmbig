@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="804.996" height="531.008" viewBox="0 0 804.996 531.008">
+  <defs>
+    <filter id="_35-35.9-100-27.03_" x="229.502" y="0" width="301.501" height="329.469" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_36-36.9-90-24.32_" x="213.492" y="229.5" width="315.798" height="301.508" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_37-37.9-80-21.62_" x="2.827" y="229.5" width="298.674" height="300.941" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_38-3.8.9-100-27.03_" x="0" y="0" width="301.502" height="337.402" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_35-35.9-100-40.00_" x="229.496" y="50" width="251.512" height="396.719" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_36-36.9-70-28.00_" x="68.162" y="229.5" width="338.841" height="251.501" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_37-37.9-30-12.00_" x="49.996" y="177.019" width="251.5" height="203.168" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_38-3.8.9-50-20.00_" x="57.839" y="50" width="243.657" height="251.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_35-35.9-80-36.36_" x="229.5" y="100" width="201.502" height="284.741" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_36-36.9-60-27.27_" x="133.262" y="229.5" width="267.44" height="201.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_37-37.9-50-22.73_" x="99.999" y="148.003" width="201.5" height="240.149" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-11"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_38-3.8.9-30-13.64_" x="128.859" y="100" width="172.64" height="201.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur-12"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="합치기_2" x="298.926" y="201.148" width="259.07" height="110.711" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11.5" result="blur-13"/>
+      <feFlood flood-color="#44444f" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur-13"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_798" data-name="그룹 798" transform="translate(-969.004 -1439.996)">
+    <g id="그룹_669" data-name="그룹 669" transform="translate(973 -907)">
+      <rect id="사각형_247" data-name="사각형 247" width="249" height="33" rx="16.5" transform="translate(552 2550)" fill="#dfdef7"/>
+      <g id="그룹_462" data-name="그룹 462" transform="translate(15 -24)">
+        <circle id="타원_322" data-name="타원 322" cx="5" cy="5" r="5" transform="translate(558 2586)" fill="#5041f2"/>
+        <text id="NO.1_CHARTS" data-name="NO.1 CHARTS" transform="translate(578 2597)" fill="#5b5d6b" font-size="16" font-family="SUIT-Medium, SUIT" font-weight="500"><tspan x="0" y="0">NO.1 CHARTS</tspan></text>
+        <text id="_80_" data-name="80%" transform="translate(764 2597)" fill="#9496a1" font-size="16" font-family="SUIT-Regular, SUIT"><tspan x="-35" y="0">80%</tspan></text>
+      </g>
+    </g>
+    <g id="그룹_670" data-name="그룹 670" transform="translate(973 -907)">
+      <rect id="사각형_245" data-name="사각형 245" width="249" height="33" rx="16.5" transform="translate(552 2636)" fill="#dfdef7"/>
+      <g id="그룹_458" data-name="그룹 458" transform="translate(15 2)">
+        <circle id="타원_322-2" data-name="타원 322" cx="5" cy="5" r="5" transform="translate(558 2646)" fill="#a59ef7"/>
+        <text id="NO.3_CHARTS" data-name="NO.3 CHARTS" transform="translate(578 2657)" fill="#5b5d6b" font-size="16" font-family="SUIT-Medium, SUIT" font-weight="500"><tspan x="0" y="0">NO.3 CHARTS</tspan></text>
+        <text id="_50_" data-name="50%" transform="translate(764 2657)" fill="#9496a1" font-size="16" font-family="SUIT-Regular, SUIT"><tspan x="-35" y="0">50%</tspan></text>
+      </g>
+    </g>
+    <g id="그룹_671" data-name="그룹 671" transform="translate(973 -907)">
+      <rect id="사각형_246" data-name="사각형 246" width="249" height="33" rx="16.5" transform="translate(552 2593)" fill="#dfdef7"/>
+      <g id="그룹_460" data-name="그룹 460" transform="translate(15 -11)">
+        <circle id="타원_322-3" data-name="타원 322" cx="5" cy="5" r="5" transform="translate(558 2616)" fill="#f2748d"/>
+        <text id="NO.2_CHARTS" data-name="NO.2 CHARTS" transform="translate(578 2627)" fill="#5b5d6b" font-size="16" font-family="SUIT-Medium, SUIT" font-weight="500"><tspan x="0" y="0">NO.2 CHARTS</tspan></text>
+        <text id="_40_" data-name="40%" transform="translate(764 2627)" fill="#9496a1" font-size="16" font-family="SUIT-Regular, SUIT"><tspan x="-36" y="0">40%</tspan></text>
+      </g>
+    </g>
+    <g id="파이_차트" data-name="파이 차트" transform="translate(-6790.994 -8954.004)">
+      <g id="파이_차트-부문" data-name="파이 차트-부문">
+        <g transform="matrix(1, 0, 0, 1, 7760, 10394)" filter="url(#_35-35.9-100-27.03_)">
+          <path id="_35-35.9-100-27.03_2" data-name="35-35.9-100-27.03%" d="M0,0H229.5a229.5,229.5,0,0,1-77.429,171.885,229.5,229.5,0,0,1-180.04,55.9Z" transform="translate(265.5 262.5) rotate(-90)" fill="#1a0ea2"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 7760, 10394)" filter="url(#_36-36.9-90-24.32_)">
+          <path id="_36-36.9-90-24.32_2" data-name="36-36.9-90-24.32%" d="M0,0-27.969,227.789c-121.172-14.878-209.488-122.014-200.972-243.8Z" transform="translate(265.5 262.5) rotate(-90)" fill="#3929ed"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 7760, 10394)" filter="url(#_37-37.9-80-21.62_)">
+          <path id="_37-37.9-80-21.62_2" data-name="37-37.9-80-21.62%" d="M0,0-228.941-16.009A229.5,229.5,0,0,1-35.9-226.674Z" transform="translate(265.5 262.5) rotate(-90)" fill="#9087f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 7760, 10394)" filter="url(#_38-3.8.9-100-27.03_)">
+          <path id="_38-3.8.9-100-27.03_2" data-name="38-3.8.9-100-27.03%" d="M0,0-35.9-226.674a229.5,229.5,0,0,1,184.95,52.161A229.5,229.5,0,0,1,229.5,0Z" transform="translate(265.5 262.5) rotate(-90)" fill="#e7e5fd"/>
+        </g>
+      </g>
+    </g>
+    <g id="파이_차트-2" data-name="파이 차트" transform="translate(-7316 -8954.004)">
+      <g id="파이_차트-부문-2" data-name="파이 차트-부문">
+        <g transform="matrix(1, 0, 0, 1, 8285, 10394)" filter="url(#_35-35.9-100-40.00_)">
+          <path id="_35-35.9-100-40.00_2" data-name="35-35.9-100-40.00%" d="M0,0H179.5A179.5,179.5,0,0,1,55.469,170.715a179.5,179.5,0,0,1-200.687-65.207Z" transform="translate(265.5 262.5) rotate(-90)" fill="#8d0d26"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 8285, 10394)" filter="url(#_36-36.9-70-28.00_)">
+          <path id="_36-36.9-70-28.00_2" data-name="36-36.9-70-28.00%" d="M0,0-145.219,105.507a179.5,179.5,0,0,1-28.95-148.932,179.5,179.5,0,0,1,95.48-117.909Z" transform="translate(265.5 262.5) rotate(-90)" fill="#e91740"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 8285, 10394)" filter="url(#_37-37.9-30-12.00_)">
+          <path id="_37-37.9-30-12.00_2" data-name="37-37.9-30-12.00%" d="M0,0-78.688-161.334A179.5,179.5,0,0,1,52.481-171.657Z" transform="translate(265.5 262.5) rotate(-90)" fill="#f2748d"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 8285, 10394)" filter="url(#_38-3.8.9-50-20.00_)">
+          <path id="_38-3.8.9-50-20.00_2" data-name="38-3.8.9-50-20.00%" d="M0,0,52.481-171.657A179.5,179.5,0,0,1,179.5,0Z" transform="translate(265.5 262.5) rotate(-90)" fill="#fbd1d9"/>
+        </g>
+      </g>
+    </g>
+    <g id="파이_차트-3" data-name="파이 차트" transform="translate(-8121.996 -8954.004)">
+      <g id="파이_차트-부문-3" data-name="파이 차트-부문">
+        <g transform="matrix(1, 0, 0, 1, 9091, 10394)" filter="url(#_35-35.9-80-36.36_)">
+          <path id="_35-35.9-80-36.36_2" data-name="35-35.9-80-36.36%" d="M0,0H129.5A129.5,129.5,0,0,1,54.729,117.367,129.5,129.5,0,0,1-83.241,99.2Z" transform="translate(265.5 262.5) rotate(-90)" fill="#0e075e"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 9091, 10394)" filter="url(#_36-36.9-60-27.27_)">
+          <path id="_36-36.9-60-27.27_2" data-name="36-36.9-60-27.27%" d="M0,0-83.241,99.2A129.5,129.5,0,0,1-129.48,2.26a129.5,129.5,0,0,1,42.828-98.5Z" transform="translate(265.5 262.5) rotate(-90)" fill="#1d0ebd"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 9091, 10394)" filter="url(#_37-37.9-50-22.73_)">
+          <path id="_37-37.9-50-22.73_2" data-name="37-37.9-50-22.73%" d="M0,0-86.652-96.237A129.5,129.5,0,0,1,81.5-100.64Z" transform="translate(265.5 262.5) rotate(-90)" fill="#4f40f1"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 9091, 10394)" filter="url(#_38-3.8.9-30-13.64_)">
+          <path id="_38-3.8.9-30-13.64_2" data-name="38-3.8.9-30-13.64%" d="M0,0,81.5-100.64A129.5,129.5,0,0,1,129.5,0Z" transform="translate(265.5 262.5) rotate(-90)" fill="#a79ff8"/>
+        </g>
+      </g>
+    </g>
+    <g id="그룹_688" data-name="그룹 688" transform="translate(-6645 -7729.141)">
+      <g transform="matrix(1, 0, 0, 1, 7614, 9169.14)" filter="url(#합치기_2)">
+        <path id="합치기_2-2" data-name="합치기 2" d="M1184.76-147.29a9,9,0,0,1-9-9V-179a9,9,0,0,1,9-9h162a9,9,0,0,1,9,9v22.711a9,9,0,0,1-9,9ZM1167-167.406l8.761-6.881v13.764Z" transform="translate(-832.76 419.15)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      </g>
+      <g id="Data_Key" data-name="Data Key" transform="translate(7956.5 9407.641)">
+        <g id="Data" transform="translate(10.5 7)">
+          <text id="_750" data-name="$750" transform="translate(109 11)" fill="#9496a1" font-size="14" font-family="SUIT-Regular, SUIT"><tspan x="0" y="0">35-35.9</tspan></text>
+          <text id="_750-2" data-name="$750" transform="translate(12 11)" font-size="14" font-family="SUIT-Medium, SUIT" font-weight="500"><tspan x="0" y="0">NO.1 CHARTS</tspan></text>
+          <rect id="Sales" width="8" height="8" rx="4" transform="translate(0 3)" fill="#4f40f1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header
+        .row.align-items-center
+            .col-auto
+                h2.page-title 전문가 공유 심사 리스트
+            .col-auto.ml-auto
+                select.form-select.br-50.text-center([(ngModel)]="mode", (change)="pageLoad(1)", style='font-weight:bold')
+                    option(selected, value="default") 모두
+                    option(value="process") 심사중
+                    option(value="stop") 중단
+                    option(value="allow") 승인
+                    option(value="reject") 거절
+
+    .row.mt-4
+        .col-md-12
+            .overflow-x
+                table.table.board-table.table-hover.table-vcenter.box-shadow.br-10
+                    thead
+                        tr
+                            th.text-center.width-1.btlr 문서
+                            th.text-center.width-2 진행 상태
+                            th.text-center 데이터셋
+                            th.text-center 활용 목적
+                            th.text-center.width-2 요청자
+                            th.text-center.width-2.btrr 마감일
+
+                    tbody
+                        tr(*ngIf="list?.length==0")
+                            td.text-center.p-6(colspan=6) 목록이 없습니다.
+
+                        tr.cursor-pointer(*ngFor="let item of list;let i = index", (click)="click(item.id)", disabled)
+                            td.text-center {{item.id}}
+                            td.text-center
+                                button.btn.btn-sm(class='{{item.status_class}}') {{item.status_name}}
+                            td.text-center {{item.dataset_name}} 데이터셋
+                            td.text-center {{item.purpose}}
+                            td.text-center {{item.created.substring(0,10)}}
+                            td.text-center(*ngIf="!item.deadline") 기한없음
+                            td.text-center(*ngIf="item.deadline") {{item.deadline.substring(0,10)}}
+
+    .row.mt-4(*ngIf="lastpage > 0")
+        wiz-component-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="pageLoad($event)")
+        .mb-6

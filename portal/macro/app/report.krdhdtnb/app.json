@@ -1,0 +1,23 @@
+{
+    "mode": "portal",
+    "id": "report.krdhdtnb",
+    "title": "\ubcf4\uace0\uc11c - ELISA \uc2e4\ud5d8 \ubcf4\uace0\uc11c",
+    "namespace": "report.krdhdtnb",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-macro-report-krdhdtnb([path]=\"\")",
+    "ng.build": {
+        "id": "portal.macro.report.krdhdtnb",
+        "name": "PortalMacroReportKrdhdtnbComponent",
+        "path": "./portal.macro.report.krdhdtnb/portal.macro.report.krdhdtnb.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-macro-report-krdhdtnb",
+        "inputs": [
+            "path"
+        ],
+        "outputs": []
+    },
+    "type": "app"
+}

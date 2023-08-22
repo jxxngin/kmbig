@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.main",
+    "title": "\uba54\uc778\ud398\uc774\uc9c0",
+    "namespace": "main",
+    "viewuri": "/main",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.main",
+        "name": "PageMainComponent",
+        "path": "./page.main/page.main.component"
+    },
+    "ng": {
+        "selector": "wiz-page-main",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-main()"
+}

@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.survey.list",
+    "title": "\uc124\ubb38 \ubd84\uc11d - \ub9ac\uc2a4\ud2b8",
+    "namespace": "survey.list",
+    "viewuri": "/survey",
+    "category": "",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.survey.list",
+        "name": "PageSurveyListComponent",
+        "path": "./page.survey.list/page.survey.list.component"
+    },
+    "ng": {
+        "selector": "wiz-page-survey-list",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-survey-list()"
+}

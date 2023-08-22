@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.pages",
+    "title": "KMBIG \uc18c\uac1c",
+    "namespace": "pages",
+    "viewuri": "/page/:category",
+    "category": "page",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.pages",
+        "name": "PagePagesComponent",
+        "path": "./page.pages/page.pages.component"
+    },
+    "ng": {
+        "selector": "wiz-page-pages",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-pages()"
+}

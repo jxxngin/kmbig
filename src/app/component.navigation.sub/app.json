@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.navigation.sub",
+    "title": "\ub124\ube44\uac8c\uc774\uc158 - \uc11c\ube0c",
+    "namespace": "navigation.sub",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.navigation.sub",
+        "name": "ComponentNavigationSubComponent",
+        "path": "./component.navigation.sub/component.navigation.sub.component"
+    },
+    "ng": {
+        "selector": "wiz-component-navigation-sub",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-navigation-sub()"
+}

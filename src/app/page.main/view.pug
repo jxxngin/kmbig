@@ -1,0 +1,26 @@
+.container-full.p-0
+    .container-sub
+        .container-search
+            .search
+                wiz-component-search(style="width: 100%")
+
+    .container-sub2
+        .container-dataset
+            .container-network.p-0
+                wiz-component-graph-network()
+            .container-card
+                .row
+                    wiz-component-search-popularity(title="인기 검색어")
+                .case
+                    .row
+                        .col-6
+                            wiz-component-card-case(title="데이터셋", [num]="info.dataset", unit="건")
+                        .col-6(style="padding-left:5px")
+                            wiz-component-card-case(title="다운로드", [num]="info.download", unit="건")
+                    .row(style="margin-top:10px")
+                        .col-6
+                            wiz-component-card-case(title="파일", [num]="info.files", unit="건")
+                        .col-6(style="padding-left:5px")
+                            wiz-component-card-case(title="파일 용량", [num]="info.size", unit="{{info.type}}")
+                    .row(style="margin-top:10px")
+                        wiz-component-card-offer(title="데이터 제공신청", text="포털에서 제공하지 않는 공공데이터를 신청하실 수 있습니다.")

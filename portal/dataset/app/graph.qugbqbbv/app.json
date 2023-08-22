@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.qugbqbbv",
+    "title": "\uadf8\ub798\ud504 - \uc694\ud654\ud559 \ubd84\uc11d",
+    "namespace": "graph.qugbqbbv",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-qugbqbbv()",
+    "ng.build": {
+        "id": "portal.dataset.graph.qugbqbbv",
+        "name": "PortalDatasetGraphQugbqbbvComponent",
+        "path": "./portal.dataset.graph.qugbqbbv/portal.dataset.graph.qugbqbbv.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-qugbqbbv",
+        "inputs": [],
+        "outputs": []
+    }
+}

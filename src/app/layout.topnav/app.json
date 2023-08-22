@@ -1,0 +1,19 @@
+{
+    "mode": "layout",
+    "id": "layout.topnav",
+    "title": "Topnav",
+    "namespace": "topnav",
+    "viewuri": "",
+    "category": "theme",
+    "ng.build": {
+        "id": "layout.topnav",
+        "name": "LayoutTopnavComponent",
+        "path": "./layout.topnav/layout.topnav.component"
+    },
+    "ng": {
+        "selector": "wiz-layout-topnav",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-layout-topnav()"
+}

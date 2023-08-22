@@ -1,0 +1,128 @@
+nav.navbar.navbar-expand-lg.p-0
+    .container-fluid
+        a.navbar-brand(href="/main")
+            img(src="/assets/images/kmbig_logo.svg", style="width: 130px")
+            
+        .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0(style="padding-left:60px;font-size:18px")
+                li.nav-item(*ngFor="let item of menu_ls;")
+                    .hover-nav.d-flex((mouseover)="log(item)")
+                        a.nav-link
+                            span.word-break.highlight {{item.name}}
+                        .submenu(*ngIf="item.index == 'page' || item.index == 'dashboard' || item.index == 'share'")
+                            ul.d-flex.pl-0([ngClass]="item.index == 'page' ? '' : 'd-none'")
+                                li.depth2(style="border-left: 1px solid #DADFE5;")
+                                    h3.depth-title KMBIG
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a KMBIG 소개
+                                        li.depth3
+                                            a 이용 안내
+                                        li.depth3
+                                            a 제공신청 안내
+                                li.depth2
+                                    h3.depth-title 정책
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a 이용 약관
+                                        li.depth3
+                                            a 개인정보 처리방침
+                                li.depth2
+                                    h3.depth-title 서비스
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a 연계 서비스
+                        
+                            ul.d-flex.pl-0([ngClass]="item.index == 'dashboard' ? '' : 'd-none'")
+                                li.depth2(style="border-left: 1px solid #DADFE5;")
+                                    h3.depth-title 기기 데이터셋
+                                    ul.mt-4.pl-0.d-flex
+                                        .col-auto.mr-4
+                                            li.depth3
+                                                a 3D 체형 측정
+                                            li.depth3
+                                                a 구취 분석
+                                            li.depth3
+                                                a 대사량 측정
+                                            li.depth3
+                                                a 맥진
+                                            li.depth3
+                                                a 복부압통 측정
+                                            li.depth3
+                                                a 설진
+                                            li.depth3
+                                                a 소변의 색 측정
+                                        .col-auto.mr-4
+                                            li.depth3
+                                                a 신장 몸무게
+                                            li.depth3
+                                                a 심박변이도 검사
+                                            li.depth3
+                                                a 알레르기 검사
+                                            li.depth3
+                                                a 요화학 분석
+                                            li.depth3
+                                                a 자세 평가
+                                            li.depth3
+                                                a 전신체온 측정
+                                            li.depth3
+                                                a 체성분 분석
+                                        .col-auto
+                                            li.depth3
+                                                a 체온 측정
+                                            li.depth3
+                                                a 체질 검사 (체형)
+                                            li.depth3
+                                                a 타액분비량 측정
+                                            li.depth3
+                                                a 피부유수분 분석
+                                            li.depth3
+                                                a 혈압 측정
+                                            li.depth3
+                                                a 환기량 측정
+                                            li.depth3
+                                                a 활성산소 분석
+
+                                li.depth2
+                                    h3.depth-title tm-mc 데이터셋
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a Medicinal Material
+                                        li.depth3
+                                            a Medicinal Compound
+                                        li.depth3
+                                            a Chemical Property
+                                        li.depth3
+                                            a Chemical Protein
+                                        li.depth3
+                                            a Protein disease
+                                        li.depth3
+                                            a Prescription
+                                        
+                                li.depth2
+                                    h3.depth-title 연계 데이터셋
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a 연계 데이터셋
+                                        
+                            ul.d-flex.pl-0([ngClass]="item.index == 'share' ? '' : 'd-none'")
+                                li.depth2(style="border-left: 1px solid #DADFE5;")
+                                    h3.depth-title 공유
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a 내 공유요청 목록
+                                        li.depth3
+                                            a 전문가 공유 심사
+                                li.depth2
+                                    h3.depth-title 저장
+                                    ul.mt-4.pl-0
+                                        li.depth3
+                                            a 연구자 서랍
+
+            .d-flex
+                span.mt-2.mr-3 정인 님
+                .notification.mr-3
+                    i.fa-regular.fa-bell
+                        span.badge.bg-red.badge-blink
+                a.btn.logout.mr-2(href="/mypage") 내 정보
+                a.btn.logout(href="/auth/logout") 로그아웃

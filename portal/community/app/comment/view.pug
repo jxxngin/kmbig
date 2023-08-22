@@ -1,0 +1,32 @@
+.input-group.mt-2.mb-2
+    textarea.form-control(
+        type="text",
+        placeholder="댓글을 입력해주세요",
+        rows=4, 
+        [(ngModel)]="text",
+        (keydown.enter)="onEnter()")
+    button.btn((click)="upload()") 댓글달기
+.col-md-12
+    ul.list-group.card-list-group
+        li.list-group-item.p-2(*ngFor="let item of comment; let i = index")
+            .d-flex
+                .flex-fill
+                    .comment-info
+                        small.float-end
+                            button.btn.btn-sm.btn-border.text-muted.cursor-pointer.br-5(*ngIf="login.id == item.user.id", (click)="update(item.id)") 수정
+                            span.mr-1.ml-2(*ngIf="login.id == item.user.id") |
+                            button.btn.btn-sm.cursor-pointer.br-5(*ngIf="login.id == item.user.id || login.role == 'admin'", (click)="del(item.id)") 삭제
+                            span.mr-2.ml-2(*ngIf="login.id == item.user.id || login.role == 'admin'") |
+                            span.text-muted {{item.created}}
+                        
+                    h4.mt-1 {{item.user.name ? item.user.name : item.user.id}}
+                        span.ml-2.text-muted.small {{item.user.email}}
+                    div(*ngIf="item.status != 'edit'", style="white-space: pre") {{item.content}}
+                    .input-group.mt-2.mb-2(*ngIf="item.status == 'edit'")
+                        textarea.form-control(
+                            type="text", 
+                            placeholder="댓글을 입력해주세요", 
+                            rows=4,
+                            [(ngModel)]="item.content",
+                            (keydown.enter)="update(item.id, item.content)")
+                        button.btn((click)="update(item.id, item.content)") 수정

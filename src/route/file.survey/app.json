@@ -1,0 +1,7 @@
+{
+    "id": "file.survey",
+    "title": "/file/survey/<path:path>",
+    "route": "/file/survey/<path:path>",
+    "viewuri": "",
+    "category": ""
+}

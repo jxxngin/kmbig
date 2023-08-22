@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.efwesxht",
+    "title": "\uadf8\ub798\ud504 - \uccb4\uc131\ubd84 \ubd84\uc11d",
+    "namespace": "graph.efwesxht",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-efwesxht()",
+    "ng.build": {
+        "id": "portal.dataset.graph.efwesxht",
+        "name": "PortalDatasetGraphEfwesxhtComponent",
+        "path": "./portal.dataset.graph.efwesxht/portal.dataset.graph.efwesxht.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-efwesxht",
+        "inputs": [],
+        "outputs": []
+    }
+}

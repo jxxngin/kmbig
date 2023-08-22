@@ -1,0 +1,143 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header.pb-4.mb-4(style="border-bottom: 2px solid #000000;")
+        .row.align-items-center
+            .col-auto
+                h2.page-title(style='font-size:30px') 공유 심사 확인
+                    button.btn.ml-3(class="{{info.status_class}}") {{info.status_name}}
+
+            .col-auto.ml-auto
+                a.btn.btn-border.pr-4.pl-4(routerLink="/share/expert/form")
+                    i.mr-2.fas.fa-list
+                    | 목록
+                a.btn.btn-border.pr-4.pl-4.ml-2((click)="open()")
+                    i.mr-2.fas.fa-file
+                    | 데이터셋 정보
+    
+    .share-confirm
+        .card.card-body.br-10
+            .row
+                .col-md-4
+                    h3 요청 번호
+                .col-md-4
+                    h3 요청자
+            .row
+                .col-md-4
+                    span {{info.id}}
+                .col-md-4
+                    span {{info.user}}
+
+            .row.pt-4
+                .col-md-4
+                    h3 요청 데이터셋
+                .col-md-4
+                    h3 마감 날짜
+            .row.pt-0.info-form.pb-4
+                .col-md-4
+                    span {{info.dataset_name}}
+                .col-md-4(*ngIf="info.status=='request'")
+                    input.form-control(type="date", [(ngModel)]="info.deadline")
+                .col-md-4(*ngIf="info.status!='request'")
+                    span(*ngIf="info.status!='request' && !info.deadline") 기한없음
+                    span(*ngIf="info.status!='request' && info.deadline") {{info.deadline.substring(0,10)}}
+
+            .row.pt-4
+                .col-md-4
+                    h3 활용 목적
+                .col-md-8
+                    h3 데이터셋 공유 요청 목적
+            .row.pt-0.info-form.pb-4
+                .col-md-4
+                    span {{info.purpose}}
+                .col-md-8
+                    span {{info.content}}
+
+            .row.pt-4
+                .col-md-12
+                    h3 데이터 미리보기 (전체 {{preview.rows}}건 중 {{preview.filter_rows}}건)
+            .row.pt-2
+                .col-md-12
+                    span(style="color:red") *
+                    |  데이터셋 공유 필터
+                    table.table.board-table
+                        thead
+                            tr
+                                th.text-center 수집 연도
+                                th.text-center 성별
+                                th.text-center 연령
+                                th.text-center 체질
+                                th.text-center 키
+                                th.text-center 몸무게
+
+                        tbody
+                            tr
+                                td.text-center
+                                    .filter-area
+                                        label.d-flex.form-check.mb-1(*ngFor="let year of period;let i = index")
+                                            input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.period[year]", disabled)
+                                            span.form-check-label {{year}}
+                                td.text-center
+                                    .filter-area
+                                        label.d-flex.form-check.mb-1(*ngFor="let fm of sex;let i = index")
+                                            input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sex[fm]", disabled)
+                                            span.form-check-label {{fm}}
+                                td.text-center
+                                    .row
+                                        .col-md-6(*ngFor="let birthday of age;let i = index")
+                                            .filter-area
+                                                label.d-flex.form-check.mb-1
+                                                    input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.age[birthday]", disabled)
+                                                    span.form-check-label {{birthday}}
+                                td.text-center
+                                    .filter-area
+                                        label.d-flex.form-check.mb-1(*ngFor="let ss of sasang;let i = index")
+                                            input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sasang[ss]", disabled)
+                                            span.form-check-label {{ss}}
+                                td.text-center
+                                    .filter-area
+                                        label.d-flex.mb-1
+                                            input.form-control(type='text', [(ngModel)]="filter.height1", disabled)
+                                            span  ~  
+                                            input.form-control(type='text', [(ngModel)]="filter.height2", disabled)
+                                td.text-center
+                                    .filter-area
+                                        label.d-flex.mb-1
+                                            input.form-control(type='text', [(ngModel)]="filter.weight1", disabled)
+                                            span ~ 
+                                            input.form-control(type='text', [(ngModel)]="filter.weight2", disabled)
+
+            .row.pt-0.pb-3
+                .col-md-12
+                    span(style="color:red") *
+                    |  데이터셋
+                    .card.card-body(*ngIf="!previewTF")
+                        h3.text-center(style="color:red") 요청된 필터에 적합한 데이터가 없습니다.
+                    .row.px-2(style="overflow:auto")
+                        table.table.table-hover.board-table(*ngIf="previewTF")
+                            thead
+                                tr
+                                    th.text-center(*ngFor="let col of columns;let i = index") {{col}}
+                                tr
+                                    th.text-center(*ngFor="let column of preview.schema;let i = index") {{column.desc}}
+                            tbody
+                                tr(*ngFor="let row of preview.df;let i = index")
+                                    td(*ngFor="let col of columns;") {{row[col]}}
+
+            .row.pt-4
+                .col-md-4
+                    h3 활용 승인 여부
+            .row.pt-2
+                .col-md-4
+                    button.btn(class='{{info.status_class}}') {{info.status_name}}
+        
+            .row.pt-4(*ngIf="editorLoaded")
+                h3 코멘트
+            .row(*ngIf="editorLoaded")
+                .editor-area.mt-3.mb-4
+                    textarea('#editor'='', rows=3)
+
+        .text-center.mt-4
+            button.btn.btn-border.pr-4.pl-4.ml-2(*ngIf="['request','process'].includes(info.expert_status)", (click)="reject()") 거절
+            button.btn.btn-full.pr-4.pl-4.ml-2(*ngIf="['request','process'].includes(info.expert_status)", (click)="allow()") 승인
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

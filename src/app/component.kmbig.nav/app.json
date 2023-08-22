@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.kmbig.nav",
+    "title": "kmbig - navigation",
+    "namespace": "component.kmbig.nav",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.kmbig.nav",
+        "name": "ComponentKmbigNavComponent",
+        "path": "./component.kmbig.nav/component.kmbig.nav.component"
+    },
+    "ng": {
+        "selector": "wiz-component-kmbig-nav",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-kmbig-nav()"
+}

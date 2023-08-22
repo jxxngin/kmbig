@@ -1,0 +1,40 @@
+.container-preview.p-0
+    ul.nav.nav-tabs.nav-fill
+        li.nav-item
+            .nav-link.text-center.d-block((click)="tab('preview')", [ngClass]="mode=='preview' ? 'active':''") 데이터 미리보기
+        li.nav-item
+            .nav-link.text-center.d-block((click)="tab('schema')", [ngClass]="mode=='schema' ? 'active':''") 스키마
+
+    .tab-content(style="border-top:none")
+        .card.tab-pane.show.active(*ngIf="mode == 'preview'", style="border-top:none")
+            .card-body(style="overflow:auto")
+                .row
+                    table.table.table-hover.board-table
+                        thead
+                            tr
+                                th.text-center(*ngFor="let col of columns;let i = index") {{col}}
+                        tbody
+                            tr(*ngFor="let row of file;let i = index")
+                                td(*ngFor="let col of columns;") {{row[col]}}
+                                
+        .card.tab-pane.show.active(*ngIf="mode == 'schema'", style="border-top:none")
+            .card-body
+                .row
+                    table.table.table-hover.board-table
+                        thead
+                            tr
+                                th.text-center(style="width:10%") 번호
+                                th.text-center 컬럼명
+                                th.text-center 데이터유형
+                                th.text-center 컬럼 설명
+                                th.text-center 상세 설명 주석
+                        tbody
+                            tr(*ngFor="let column of list.schema;let i = index")
+                                td.text-center {{i+1}}
+                                td.text-center {{column.name}}
+                                td.text-center {{column.type}}
+                                td.text-center {{column.desc}}
+                                td.text-center {{column.detail}}
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

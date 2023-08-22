@@ -1,0 +1,6 @@
+{
+    "package": "dataset",
+    "title": "Dataset Graph",
+    "use_sample": true,
+    "use_app": true
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75.5" height="101" viewBox="0 0 75.5 101">
+  <defs>
+    <filter id="타원_330" x="22" y="0" width="33" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_218" x="24" y="26" width="29" height="75" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_340" x="15" y="21" width="47" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_217" x="13" y="16.107" width="50.843" height="63.042" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="태양인" transform="translate(0 6)">
+    <path id="다각형_24" data-name="다각형 24" d="M34.812,2.133a5,5,0,0,1,5.876,0L72.559,25.275a5,5,0,0,1,1.817,5.592L62.2,68.307a5,5,0,0,1-4.755,3.454h-39.4A5,5,0,0,1,13.3,68.307L1.124,30.867a5,5,0,0,1,1.817-5.592Z" transform="translate(0 5)" fill="#a79ff8" opacity="0.351"/>
+    <g id="그룹_551" data-name="그룹 551" transform="translate(22 0.155)">
+      <g id="그룹_534" data-name="그룹 534" transform="translate(1.877)">
+        <g transform="matrix(1, 0, 0, 1, -23.88, -6.16)" filter="url(#타원_330)">
+          <circle id="타원_330-2" data-name="타원 330" cx="7.5" cy="7.5" r="7.5" transform="translate(31 6)"/>
+        </g>
+        <g id="그룹_532" data-name="그룹 532" transform="translate(0 20.644)">
+          <g transform="matrix(1, 0, 0, 1, -23.88, -26.8)" filter="url(#패스_218)">
+            <path id="패스_218-2" data-name="패스 218" d="M0,0H11V57H0Z" transform="translate(33 32)"/>
+          </g>
+          <g transform="matrix(1, 0, 0, 1, -23.88, -26.8)" filter="url(#사각형_340)">
+            <path id="사각형_340-2" data-name="사각형 340" d="M7,0H22a7,7,0,0,1,7,7V33a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" transform="translate(24 27)"/>
+          </g>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -22, -6.16)" filter="url(#패스_217)">
+        <g id="패스_217-2" data-name="패스 217" transform="translate(21.98 22.11)" fill="rgba(242,116,141,0.4)" stroke-linecap="round">
+          <path d="M 25.78080749511719 44.04143524169922 L 7.067636489868164 44.04143524169922 L 1.110228538513184 18.61103439331055 L 16.42446136474609 1.498758912086487 L 31.76752471923828 18.61110305786133 L 25.78080749511719 44.04143524169922 Z" stroke="none"/>
+          <path d="M 16.42516136169434 2.997509002685547 L 2.202632904052734 18.88991165161133 L 7.860446929931641 43.04142761230469 L 24.98888778686523 43.04142761230469 L 30.67452239990234 18.89003753662109 L 16.42516136169434 2.997509002685547 M 16.42376708984375 -3.814697265625e-06 L 32.86052703857422 18.3321647644043 L 26.57272720336914 45.04142761230469 L 6.274826049804688 45.04142761230469 L 0.01782608032226562 18.3321647644043 L 16.42376708984375 -3.814697265625e-06 Z" stroke="none" fill="#f2748d"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.lpsxfshv",
+    "title": "\uadf8\ub798\ud504 - \uc790\uc138\ud3c9\uac00",
+    "namespace": "graph.lpsxfshv",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-lpsxfshv()",
+    "ng.build": {
+        "id": "portal.dataset.graph.lpsxfshv",
+        "name": "PortalDatasetGraphLpsxfshvComponent",
+        "path": "./portal.dataset.graph.lpsxfshv/portal.dataset.graph.lpsxfshv.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-lpsxfshv",
+        "inputs": [],
+        "outputs": []
+    }
+}

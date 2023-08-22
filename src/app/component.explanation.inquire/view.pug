@@ -1,0 +1,67 @@
+.row
+    span.title 데이터 건수 조회
+
+.row
+    .col-md-12
+        table.table.board-table
+            thead
+                tr
+                    th.text-center 수집 연도
+                    th.text-center 성별
+                    th.text-center 연령
+                    th.text-center 체질
+                    th.text-center 키
+                    th.text-center 몸무게
+
+            tbody
+                tr
+                    td.text-center
+                        .filter-area
+                            label.d-flex.form-check.mb-1(*ngFor="let year of period;let i = index")
+                                input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.period[year]")
+                                span.form-check-label {{year}}
+                    td.text-center
+                        .filter-area
+                            label.d-flex.form-check.mb-1(*ngFor="let fm of sex;let i = index")
+                                input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sex[fm]")
+                                span.form-check-label {{fm}}
+                    td.text-center
+                        .row
+                            .col-md-6
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let birthday of age1;let i = index")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.age[birthday]")
+                                        span.form-check-label {{birthday}}
+                            .col-md-6
+                                .filter-area
+                                    label.d-flex.form-check.mb-1(*ngFor="let birthday of age2;let i = index")
+                                        input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.age[birthday]")
+                                        span.form-check-label {{birthday}}
+                    td.text-center
+                        .filter-area
+                            label.d-flex.form-check.mb-1(*ngFor="let ss of sasang;let i = index")
+                                input.form-check-input.mr-2(type='checkbox', [(ngModel)]="filter.sasang[ss]")
+                                span.form-check-label {{ss}}
+                    td.text-center
+                        .filter-area
+                            label.d-flex.mb-1
+                                input.form-control(type='text', [(ngModel)]="filter.height1")
+                                span  ~  
+                                input.form-control(type='text', [(ngModel)]="filter.height2")
+                    td.text-center
+                        .filter-area
+                            label.d-flex.mb-1
+                                input.form-control(type='text', [(ngModel)]="filter.weight1")
+                                span ~ 
+                                input.form-control(type='text', [(ngModel)]="filter.weight2")
+
+.row
+    button.btn.btn-save.m-auto.mb-3.title((click)="result()", style="width:250px;font-size:20px;") 조회검색 결과확인
+    button.btn.btn-save.m-auto.mb-3.title((click)="push()", style="width:250px;font-size:20px;")
+        i.fas.fa-arrow-right
+
+.row(*ngIf="test")
+    h1.mt-3.mb-3.text-center(style="color:red;") 총 {{num}}건
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

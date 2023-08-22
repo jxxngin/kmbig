@@ -1,0 +1,10 @@
+.card.br-10.box-shadow
+    .card-body
+        span.title {{title}}
+        table.table
+            tbody
+                tr(*ngFor="let item of list; let i = index;", (click)="search(item)")
+                    td.text-left(style="height:30px;")
+                        span {{i+1}}
+                    td.text-left.pl-0(style="height:30px;")
+                        span {{item}}

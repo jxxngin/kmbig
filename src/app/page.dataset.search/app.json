@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dataset.search",
+    "title": "\ub370\uc774\ud130\uc14b - \uac80\uc0c9",
+    "namespace": "dataset.search",
+    "viewuri": "/dataset/search",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dataset.search",
+        "name": "PageDatasetSearchComponent",
+        "path": "./page.dataset.search/page.dataset.search.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dataset-search",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dataset-search()"
+}

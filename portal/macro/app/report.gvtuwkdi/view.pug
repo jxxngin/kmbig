@@ -1,0 +1,12 @@
+.container-ugt1a1
+    h1.mb-3(style="text-align:center;") UGT1A1 실험 보고서
+    .card.mb-4
+        .card-body(*ngIf="code==200")
+            div(*ngFor="let image of images;")
+                h3 {{image.filename}}
+                img(src="{{image.filepath}}")
+        .card-body(*ngIf="code!=200")
+            h3(style="color:red;text-align:center;") 지원되지 않는 파일입니다.
+
+.loading-wrap(*ngIf="_loading")
+    wiz-component-loading-hexa()

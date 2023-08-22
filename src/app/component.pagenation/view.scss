@@ -1,0 +1,29 @@
+.pagenation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+$color: #503FF1;
+
+.btn {
+    border-radius: 32px;
+    width: 24px;
+    height: 24px;
+    margin: 0 3px;
+    border: 0;
+    background-color: inherit;
+
+    &.disabled {
+        opacity: 0.2;
+    }
+
+    &:hover {
+        background: rgba($color: $color, $alpha: 0.66);
+        color: white;
+    }
+}
+
+.btn-blue {
+    background: $color;
+}

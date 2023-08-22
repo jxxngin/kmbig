@@ -1,0 +1,21 @@
+{
+    "mode": "page",
+    "id": "page.dataset.explanation",
+    "title": "\ub370\uc774\ud130\uc14b - \uc0c1\uc138 \uc124\uba85",
+    "namespace": "dataset.explanation",
+    "viewuri": "/dashboard/:category/:id",
+    "category": "kmbig",
+    "controller": "base",
+    "layout": "layout.topnav",
+    "ng.build": {
+        "id": "page.dataset.explanation",
+        "name": "PageDatasetExplanationComponent",
+        "path": "./page.dataset.explanation/page.dataset.explanation.component"
+    },
+    "ng": {
+        "selector": "wiz-page-dataset-explanation",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-dataset-explanation()"
+}

@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.explaination.graph",
+    "title": "\uc0c1\uc138 \uc124\uba85 - \uae30\ud0c0 \uadf8\ub798\ud504",
+    "namespace": "explaination.graph",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.explaination.graph",
+        "name": "ComponentExplainationGraphComponent",
+        "path": "./component.explaination.graph/component.explaination.graph.component"
+    },
+    "ng": {
+        "selector": "wiz-component-explaination-graph",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-explaination-graph([title]=\"\")"
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'MAIN-B';
+    font-weight: 500;
+    src: local('SUIT Bold'),
+        url('/assets/font/SUIT/SUIT-Bold.woff2') format('woff2'),
+        url('/assets/font/SUIT/SUIT-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'MAIN-M';
+    font-weight: 500;
+    src: local('SUIT Medium'),
+        url('/assets/font/SUIT/SUIT-Medium.woff2') format('woff2'),
+        url('/assets/font/SUIT/SUIT-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MAIN-N';
+    font-weight: 400;
+    src: local('SUIT Normal'),
+        url('/assets/font/SUIT/SUIT-Regular.woff2') format('woff2'),
+        url('/assets/font/SUIT/SUIT-Regular.ttf') format('truetype');
+}

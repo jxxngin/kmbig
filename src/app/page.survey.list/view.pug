@@ -1,0 +1,32 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header
+        .row.align-items-center
+            .col-auto
+                h2.page-title 설문 분석 목록
+
+            .col-auto.ml-auto.d-print-none(*ngIf="userRole=='admin'")
+                .d-flex
+                    a.btn.btn-border.pr-4.pl-4((click)="add()") 추가
+
+    .row.mt-4
+        .col-md-12
+            .overflow-x
+                table.table.board-table.table-hover.table-vcenter.box-shadow.br-10
+                    thead
+                        tr
+                            th.text-center.btlr 설문명
+                            th.text-center.width-1 생성일
+                            th.text-center.width-1([ngClass]="userRole=='admin' ? '':'btrr'") 업데이트일
+                            th.text-center.width-1.btrr(*ngIf="userRole=='admin'")
+
+                    tbody
+                        tr(*ngIf="list?.length==0")
+                            td.text-center.p-6(colspan=6) 목록이 없습니다.
+
+                        tr.cursor-pointer(*ngFor="let item of list;let i = index", (click)="result(item.id)")
+                            // td.text-center {{i+1}}
+                            td.text-center {{item.title}}
+                            td.text-center {{item.created.substring(0,10)}}
+                            td.text-center {{item.updated.substring(0,10)}}
+                            td.text-center(*ngIf="userRole=='admin'")
+                                button.btn.btn-sm((click)="edit(item.id)") 편집

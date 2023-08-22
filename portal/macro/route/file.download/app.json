@@ -1,0 +1,7 @@
+{
+    "id": "file.download",
+    "title": "/file/<path:path>",
+    "route": "/file/<action>/<path:path>",
+    "viewuri": "",
+    "category": ""
+}

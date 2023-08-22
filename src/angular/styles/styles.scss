@@ -1,0 +1,74 @@
+@import "portal/season/core";
+@import "styles/border";
+@import "styles/font/suit";
+@import "styles/table";
+@import "styles/button";
+// @import "styles/sample";
+
+body {
+    overflow-y: auto !important;
+}
+
+app-root {
+    font-family: 'MAIN-N';
+}
+
+.data-content {
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+        border: none;
+    }
+}
+
+select,
+button,
+a,
+input[type="checkbox"],
+input[type="submit"],
+input[type="button"] {
+    cursor: pointer;
+}
+
+.ck-sticky-panel__content_sticky {
+    // position: sticky !important;
+    top: 135px !important;
+}
+
+.ck.ck-editor__main>.ck-editor__editable {
+    min-height: 200px;
+}
+
+body {
+    overflow: auto !important;
+}
+
+#image_panel {
+    position: relative;
+    outline: none;
+}
+
+#image_panel img {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+#image_panel canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    outline: none;
+}
+
+#image_panel .visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+li.buffered {
+    cursor: pointer;
+}

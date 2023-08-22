@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.elqeifhl",
+    "title": "\uadf8\ub798\ud504 - \uccb4\uc628 \uce21\uc815",
+    "namespace": "graph.elqeifhl",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-elqeifhl()",
+    "ng.build": {
+        "id": "portal.dataset.graph.elqeifhl",
+        "name": "PortalDatasetGraphElqeifhlComponent",
+        "path": "./portal.dataset.graph.elqeifhl/portal.dataset.graph.elqeifhl.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-elqeifhl",
+        "inputs": [],
+        "outputs": []
+    }
+}

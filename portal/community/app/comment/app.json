@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "type": "app",
+    "id": "comment",
+    "title": "\ucee4\ubba4\ub2c8\ud2f0 - \ub313\uae00",
+    "namespace": "comment",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-community-comment()",
+    "ng.build": {
+        "id": "portal.community.comment",
+        "name": "PortalCommunityCommentComponent",
+        "path": "./portal.community.comment/portal.community.comment.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-community-comment",
+        "inputs": [],
+        "outputs": []
+    }
+}

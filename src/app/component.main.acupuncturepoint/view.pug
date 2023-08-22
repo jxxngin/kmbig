@@ -1,0 +1,22 @@
+.d-flex.flex-direction-column
+    .col
+        .point(*ngFor="let item of col1;")
+            button([ngClass]="acupuncture_point==item ? 'btn-show' : 'btn-none'", (click)="change(item)")
+                span {{item}}
+    .col
+        .point(*ngFor="let item of col2;")
+            button([ngClass]="acupuncture_point==item ? 'btn-show' : 'btn-none'", (click)="change(item)")
+                span {{item}}
+        .point
+            button.btn-none(routerLink="/dashboard/blood") 더보기
+
+    .show
+        .col-sm(*ngIf="!images[0]")
+            button.btn-none(routerLink="/dashboard/blood") More
+        .col-sm(*ngIf="images[0]")
+            img(src="{{images[0]}}")
+        .col-sm(*ngIf="images[1]")
+            img(src="{{images[1]}}")
+        .col-sm(*ngIf="images[2]")
+            img(src="{{images[2]}}")
+        

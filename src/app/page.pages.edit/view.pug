@@ -1,0 +1,13 @@
+.container.pt-4.pb-4
+    .page-header
+        .row.align-items-center
+            .col-auto.ml-auto.d-print-none
+                button.btn.kmbig-btn-orange((click)="save()")
+                    i.fas.fa-save.mr-2
+                    | 저장하기
+    
+    .editor-area.mt-4.mb-4
+        textarea#editor([(ngModel)]="info.content")
+        // textarea(id='editor-{{category}}', [(ngModel)]="info.content")
+    // form#file(style="display: none;")
+    //     input#file-upload.form-control(type='file' name='file[]' accept=".gif, .jpg, .png, .hwp" multiple)

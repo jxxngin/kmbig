@@ -1,0 +1,43 @@
+.container.pt-4.pb-4(style="max-width: 1024px;")
+    .page-header
+        .row.align-items-center
+            .col-auto
+                h2.page-title 공유 요청 리스트
+            .col-auto.ml-auto
+                select.form-select.br-50.text-center((change)="changeRank()", style='font-weight:bold')
+                    option(selected, value="default") 모두
+                    option(value="request") 접수
+                    option(value="process") 심사중
+                    option(value="allow") 승인
+                    option(value="reject") 거절
+
+    .row.mt-4
+        .col-md-12
+            .overflow-x
+                table.table.board-table.table-hover.table-vcenter.box-shadow.br-10
+                    thead
+                        tr
+                            th.text-center.width-1.btlr 문서
+                            th.text-center.width-2 진행 상태
+                            th.text-center 데이터셋
+                            th.text-center 활용 목적
+                            th.text-center.width-2 요청일
+                            th.text-center.width-2.btrr 완료일
+
+                    tbody
+                        tr(*ngIf="list?.length==0")
+                            td.text-center.p-6(colspan=6) 목록이 없습니다.
+
+                        tr.cursor-pointer(*ngFor="let item of list;let i = index", (click)="click(item.id)", disabled)
+                            td.text-center {{item.id}}
+                            td.text-center
+                                button.btn.btn-sm(class='{{item.status_class}}') {{item.status_name}}
+                            td.text-center {{item.dataset_name}}
+                            td.text-center {{item.purpose}}
+                            td.text-center {{item.created.substring(0,10)}}
+                            td.text-center(*ngIf="['allow', 'reject'].includes(item.status)") {{item.updated.substring(0,10)}}
+                            td.text-center(*ngIf="['request', 'process'].includes(item.status)") -
+
+    .row.mt-4(*ngIf="lastpage > 0")
+        wiz-component-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="pageLoad($event)")
+        .mb-4

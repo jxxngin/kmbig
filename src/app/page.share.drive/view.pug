@@ -1,0 +1,124 @@
+.container-full((drop)="drop($event)", (dragover)="$event.preventDefault()")
+    .container-title
+        .row.align-items-center
+            .col-auto
+                span.status-indicator.status-indicator-animated.status-primary
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+                    span.status-indicator-circle
+            .col
+                h2.page-title
+                    span {{user}}
+                    span 's 연구자 서랍
+            .col-auto
+                select.form-select([(ngModel)]="selected", *ngIf="macroTF", (change)="macroSelect(selected)")
+                    option(selected, hidden, value='none') ==데이터 분석==
+                    option(*ngFor="let item of macro;let i=index;", value="{{item.namespace}}") {{item.title}}
+                    // option(value="ELISA") ELISA
+                    // option(value="UGT1A1") UGT1A1
+            .col-auto.actions
+                button.btn.btn-a.mr-1((click)="remove()")
+                    i.fas.fa-trash.mr-2
+                    span Delete
+
+                button.btn.btn-a.mr-1((click)="create()")
+                    i.fas.fa-folder-plus.mr-2
+                    span Create
+
+                button.btn.btn-a((click)="upload()")
+                    i.fas.fa-upload.mr-2
+                    span Upload
+
+    .container-drive
+        .col-auto
+            .folder-list
+                .list-header([ngClass]="root === base ? 'active' : ''", (click)="move()")
+                    i.fa-solid.fa-folder
+                    h4.ml-2 내 폴더
+                .list-body
+                    mat-tree([dataSource]="dataSource", [treeControl]="treeControl")
+                        mat-tree-node(
+                            *matTreeNodeDef="let node",
+                            matTreeNodePadding="",
+                            matTreeNodePaddingIndent="16px",
+                            [ngClass]="node.active ? 'active' : ''",
+                            (click)="move(node)")
+
+                            .tree-node(*ngIf="node.name !== 'cache'")
+                                // .col-1.d-flex.justify-content-center
+                                //     i.fa-solid([ngClass]="node.extended ? 'fa-caret-down' : 'fa-caret-right'").fa-xs
+                                .col
+                                    i.fa-solid([ngClass]="node.extended ? 'fa-folder-open' : 'fa-folder-closed'")
+                                    span.ml-2 {{node.name}}
+
+        .col
+            .d-flex.navigation
+                .selection-area.mr-3
+                    input.form-check-input(type="checkbox", [(ngModel)]="selectAll", (ngModelChange)="checkAll()")
+                nav
+                    ol.breadcrumb
+                        li.breadcrumb-item {{path}}
+                    
+            .data-list
+                table.table.table-sm.table-hover.table-vcenter
+                    tbody
+                        tr.cursor-pointer(
+                            *ngIf="root !== base",
+                            (click)="goBack()"
+                        )
+                            td(colspan="6")
+                                svg.icon.mr-2(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round")
+                                    path(stroke="none" d="M0 0h24v24H0z" fill="none")
+                                    path(d="M18 18h-6a3 3 0 0 1 -3 -3v-10l-4 4m8 0l-4 -4")
+                                span ...
+                        tr(*ngIf="files?.length==0 && !mkdir")
+                            td.text-center.blank 파일이 없습니다.
+                    
+                        tr(*ngIf="mkdir")
+                            td.w-1.pr-0
+                                input.form-check-input(type="checkbox")
+                            td.w-1.pr-0
+                                .avatar-area.avatar-area-sm
+                                    .avatar-container.folder
+                                        i.fas.fa-folder
+                            td.text-left
+                                input.form-control#mkdir([(ngModel)]="dirName", (keydown.enter)="create()")
+                            td.w-1.text-right(colspan="3")
+                                button.btn.btn-b((click)="create()") Create
+
+                        tr.cursor-pointer(
+                            *ngFor="let file of files; let i = index;",
+                            (click)="checked(file)"
+                        )
+                            td.w-1.pr-0
+                                input.form-check-input#checkbox(type="checkbox", [(ngModel)]="file.checked")
+                            td.w-1.pr-0
+                                .avatar-area.avatar-area-sm
+                                    .avatar-container([ngClass]="file.type == 'folder' ? 'folder' : 'file'")
+                                        i.fas.fa-file(*ngIf="file.type == 'file'")
+                                        i.fas.fa-folder(*ngIf="file.type == 'folder'")
+                            td.text-left(*ngIf="!isRenaming[i]")
+                                a((click)="open(file)") {{file.name}}
+                            td.text-left(*ngIf="isRenaming[i]")
+                                input.form-control#rename([(ngModel)]="file.name", (keydown.enter)="rename(file, i)")
+                            td.w-1.text-right {{file.updated}}
+                            td.w-1.text-right {{file.type !== 'folder' ? filesize(file.size) : ''}}
+                            td.w-1.text-center
+                                button.btn.btn-b.mr-1((click)="rename(file, i)") Rename
+                                button.btn.btn-b((click)="download(file)") Download
+
+    .offcanvas.offcanvas-end.show([class.show]="selected!='none'", tabindex="-1", aria-labelledby="offcanvasRightLabel")
+        .offcanvas-header
+            h2#offcanvasRightLabel.offcanvas-title 데이터 분석
+            button.btn-close((click)="close()", type="button", data-bs-dismiss="offcanvas", aria-label="Close")
+        
+        .offcanvas-body
+            wiz-portal-macro-renderer([target]="selected", [path]="macroFilepath")
+    // .offcanvas.offcanvas-end#offcanvas(tabindex='-1', aria-labelledby='offcanvasLabel')
+    //     .offcanvas-header
+    //         h5.offcanvas-title#offcanvasLabel Off Canvas Navigation
+    //         button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+    //     .offcanvas-body
+    //         p When using bootstrap 5.1 it's super easy to create off canvas navigation menus. Goodbye plugins, hello full solutions!
+
+    // button.btn.btn-a(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvas', aria-controls='offcanvas') OFFCANVAS

@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.vfizmdqw",
+    "title": "\uadf8\ub798\ud504 - \ud608\uc790\ub9ac1",
+    "namespace": "graph.vfizmdqw",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-vfizmdqw()",
+    "ng.build": {
+        "id": "portal.dataset.graph.vfizmdqw",
+        "name": "PortalDatasetGraphVfizmdqwComponent",
+        "path": "./portal.dataset.graph.vfizmdqw/portal.dataset.graph.vfizmdqw.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-vfizmdqw",
+        "inputs": [],
+        "outputs": []
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "mode": "component",
+    "id": "component.chart.doughnut",
+    "title": "\ucc28\ud2b8 - Doughnut",
+    "namespace": "chart.doughnut",
+    "viewuri": "",
+    "category": "kmbig",
+    "ng.build": {
+        "id": "component.chart.doughnut",
+        "name": "ComponentChartDoughnutComponent",
+        "path": "./component.chart.doughnut/component.chart.doughnut.component"
+    },
+    "ng": {
+        "selector": "wiz-component-chart-doughnut",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-component-chart-doughnut([title]=\"\")"
+}

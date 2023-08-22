@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.oqlzxgea",
+    "title": "\uadf8\ub798\ud504 - \uad6c\ucde8 \ubd84\uc11d",
+    "namespace": "graph.oqlzxgea",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-oqlzxgea()",
+    "ng.build": {
+        "id": "portal.dataset.graph.oqlzxgea",
+        "name": "PortalDatasetGraphOqlzxgeaComponent",
+        "path": "./portal.dataset.graph.oqlzxgea/portal.dataset.graph.oqlzxgea.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-oqlzxgea",
+        "inputs": [],
+        "outputs": []
+    }
+}

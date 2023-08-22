@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.ulwaytdt",
+    "title": "\uadf8\ub798\ud504 - \ud658\uae30\ub7c9 \uce21\uc815",
+    "namespace": "graph.ulwaytdt",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-ulwaytdt()",
+    "ng.build": {
+        "id": "portal.dataset.graph.ulwaytdt",
+        "name": "PortalDatasetGraphUlwaytdtComponent",
+        "path": "./portal.dataset.graph.ulwaytdt/portal.dataset.graph.ulwaytdt.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-ulwaytdt",
+        "inputs": [],
+        "outputs": []
+    }
+}

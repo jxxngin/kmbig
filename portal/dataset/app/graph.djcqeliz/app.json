@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.djcqeliz",
+    "title": "\uadf8\ub798\ud504 - \ud53c\ubd80\uc720\uc218\ubd84 \ubd84\uc11d",
+    "namespace": "graph.djcqeliz",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-djcqeliz()",
+    "ng.build": {
+        "id": "portal.dataset.graph.djcqeliz",
+        "name": "PortalDatasetGraphDjcqelizComponent",
+        "path": "./portal.dataset.graph.djcqeliz/portal.dataset.graph.djcqeliz.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-djcqeliz",
+        "inputs": [],
+        "outputs": []
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "mode": "portal",
+    "id": "graph.acurqyvm",
+    "title": "\uadf8\ub798\ud504 - \ud65c\uc131\uc0b0\uc18c \ubd84\uc11d",
+    "namespace": "graph.acurqyvm",
+    "viewuri": "",
+    "category": "",
+    "controller": "",
+    "template": "wiz-portal-dataset-graph-acurqyvm()",
+    "ng.build": {
+        "id": "portal.dataset.graph.acurqyvm",
+        "name": "PortalDatasetGraphAcurqyvmComponent",
+        "path": "./portal.dataset.graph.acurqyvm/portal.dataset.graph.acurqyvm.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-dataset-graph-acurqyvm",
+        "inputs": [],
+        "outputs": []
+    }
+}
